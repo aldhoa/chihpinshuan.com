@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Maruti Admin</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/uniform.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/maruti-style.css" />
+<link rel="stylesheet" href="css/maruti-media.css" class="skin-color" />
+<link rel="stylesheet" type="text/css" href="css/backend_style.css">
+<script src="https://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1><a href="dashboard.html">Maruti Admin</a></h1>
+</div>
+<!--close-Header-part--> 
+
+<!--top-Header-messaages-->
+<div class="btn-group rightzero"> <a class="top_message tip-left" title="Manage Files"><i class="icon-file"></i></a> <a class="top_message tip-bottom" title="Manage Users"><i class="icon-user"></i></a> <a class="top_message tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a> <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a> </div>
+<!--close-top-Header-messaages--> 
+
+<!--top-Header-menu-->
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Danh Mục Quản Lý</a>
+  <ul>
+    <li> <a href="carts.html"><i class="icon icon-shopping-cart"></i> <span>Đơn Hàng</span></a> </li>
+    <li> <a href="watches.html"><i class="icon icon-time"></i> <span>Đồng Hồ</span></a> </li>
+    <li> <a href="brands.html"><i class="icon icon-th-large"></i> <span>Thương Hiệu</span></a> </li>
+    <li><a href="pages.html"><i class="icon icon-th"></i> <span>Trang</span></a></li>
+    <li class="submenu"> <a href="#"><i class="icon icon-briefcase"></i> <span>Sale</span><span class="label">2</span></a>
+      <ul>
+        <li><a href="brands-sale.html">Thương Hiệu</a></li>
+        <li><a href="watches-sale.html">Đồng Hồ</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div id="search">
+  <input type="text" placeholder="Search here..."/>
+  <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
+</div>
+<!--close-top-Header-menu-->
+
+
+</div>
+<div id="content">
+  <div id="content-header">
+    <div id="breadcrumb">  <a href="#" class="current trang">Trang</a> </div>
+    <h1>Trang</h1>
+    
+    <div class="widget-content"><a href="#them-trang" data-toggle="modal"> <button class="btn tip-top btn-icon-pg my-plus-btn-icon-pg" data-original-title="Thêm Trang"><ul><li><i class="icon-plus"></i>Thêm Trang </li></ul></button> </a>
+  
+            <div id="them-trang" class="modal hide">
+              <div class="modal-header">
+                <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>
+                <h3>Thêm Trang</h3>
+              </div>
+              <div class="modal-body">
+                <textarea name="editor"></textarea>
+                  <script>
+                      CKEDITOR.replace( 'editor' );
+                  </script>
+              </div>
+              <div class="modal-footer"> <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Thêm" href="#">Thêm</a> <a data-dismiss="modal" class="btn tip-top" data-original-title="Hủy" href="#">Hủy</a> </div>
+            </div>
+          </div>
+  </div>
+   
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+            <h5>Danh Sách Trang</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Trang</th>
+                  <th>Sửa&frasl; Xóa Hoặc Khôi Phục</th>
+                  <th>Trạng Thái</th>
+                </tr>
+              </thead>
+              <tbody class="btn-icon-pg my-btn-icon-pg trang">
+                <tr>
+                  <td>1</td>
+                  <td>Giới Thiệu</td>
+                  <td class="o-giua">
+                    <div class="widget-content"><a href="#1" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa Trang"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
+  
+                    <div id="1" class="modal hide">
+                      <div class="modal-header">
+                <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>
+                <h3>Sửa Trang</h3>
+              </div>
+              <div class="modal-body">
+                <form action="#" method="get" class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label">Trang :</label>
+                    <div class="controls"><input class="span9" type="text" placeholder="Trang" value="GIỚI THIỆU" /></div>
+                  </div>
+                  <div class="control-group">
+                      <textarea name="editor1">
+                         GIỚI THIỆU
+LIKEWATCH là công ty nhập khẩu và cung ứng đồng hồ và trang sức. Hiện nay, chúng tôi cung cấp trên 40 nhãn hiệu đồng hồ danh tiếng trên thế giới. Tất cả các sản phẩm từ LIKEWATCH đều có xuất xứ rõ ràng, còn nguyên hộp, catalog và thẻ bảo hành, cùng với các chính sách ưu đãi liên tục, chắc chắn quý khách sẽ luôn tìm được cho mình chiếc đồng hồ tốt nhất với mức giá cạnh tranh. Đặc biệt, nếu quý khách muốn mua sản phẩm không có trên website, hãy gọi điện trực tiếp đến nhân viên tư vấn của chúng tôi, với kinh nghiệm và sự nhiệt tình, đội ngũ tư vấn sẽ hồi đáp nhanh nhất thông tin về sản phẩm quý khách đang cần.
+
+Thông tin liên hệ:
+
+Showroom Hồ Chí Minh: Tầng 5, Tòa nhà Opera View, 161 Đồng Khởi, Quận 1
+
+Showroom Hà Nội: Tầng 1, Tòa nhà International Centre, 34 Tràng Tiền (17 Ngô Quyền), Quận Hoàn Kiếm
+
+Điện thoại: (08) 39293939
+
+Email: support@likewatch.com
+                      </textarea>
+                      <script>
+                          CKEDITOR.replace( 'editor1' );
+                      </script>
+                  </div>
+                  
+                </form>
+              </div>
+              <div class="modal-footer"> <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Sửa" href="#">Sửa</a> <a data-dismiss="modal" class="btn tip-top" data-original-title="Hủy" href="#">Hủy</a> </div>
+                    </div>
+                    <button class="btn tip-top" data-original-title="Xóa Thương Hiệu"><ul><li><i class="icon-trash"></i></li></ul></button>
+                  </div>
+
+                  </td>
+                  <td class="o-giua"><ul><li><i class="icon-ok tip-top" data-original-title="Hiện Có"></i></li></ul></td>
+                </tr>
+                
+                <tr>
+                  <td>2</td>
+                  <td>CHÍNH SÁCH BÁN HÀNG</td>
+                  <td class="o-giua">
+                    <div class="widget-content"><a href="#2" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa Trang"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
+  
+                    <div id="2" class="modal hide">
+                      <div class="modal-header">
+                <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>
+                <h3>Sửa Trang</h3>
+              </div>
+              <div class="modal-body">
+                <form action="#" method="get" class="form-horizontal">
+                  <div class="control-group">
+                    <label class="control-label">Trang :</label>
+                    <div class="controls"><input class="span9" type="text" placeholder="Trang" value="GIỚI THIỆU" /></div>
+                  </div>
+                  <div class="control-group">
+                      <textarea name="editor2">
+                        CHÍNH SÁCH BÁN HÀNG
+Giao hàng
+
+LIKEWATCH giao hàng miễn phí toàn quốc. Chúng tôi chỉ sử dụng hình thức vận chuyển đảm bảo để đưa sản phẩm đến tận tay quý khách. Tất cả sản phẩm đều được mua bảo hiểm trong quá trình vận chuyển, vì vậy, quý khách có thể yên tâm vì LIKEWATCH chịu mọi trách nhiệm nếu có sự cố xảy ra.
+
+Đối với khách hàng đặt giao hàng tại thành phố Hồ Chí Minh, chúng tôi sẽ giao đến quý khách từ 3-6 giờ trong giờ làm việc. Đối với khách hàng đặt giao hàng ở các thành phố thuộc tỉnh thành khác, quý khách sẽ nhận được sản phẩm từ 1-3 ngày làm việc. Nếu quý khách ở các địa phương khác, thời gian nhận hàng có thể lên đến 7 ngày làm việc.
+
+Trong trường hợp mẫu đồng hồ quý khách quan tâm không có tại cửa hàng, quý khách vui lòng chờ từ 2-4 tuần để chúng tôi nhập hàng trực tiếp từ Mỹ, hoặc Châu Âu. Những đơn hàng đặc biệt như, Audemars Piguet, Patek Philippe, Vacheron Constantin... vui lòng chờ từ 4-8 tuần. Chúng tôi sẽ gọi điện và thông báo chính xác thời gian giao hàng cho quý khách trong thời gian sớm nhất.
+
+Phương thức thanh toán
+
+Nếu quý khách mua hàng tại cửa hàng LIKEWATCH, vui lòng thanh toán trực tiếp cho nhân viên bán hàng.
+
+Trong trường hợp đặt giao hàng tận nơi, sau khi nhận và kiểm tra sản phẩm, quý khách thanh toán cho nhân viên giao hàng.
+
+Đối với những khách muốn mua sản phẩm không có sẵn tại kho hàng Việt Nam, quý khách vui lòng đặt cọc trước 10-50% giá trị sản phẩm, và chúng tôi sẽ không hoàn lại tiền cọc nếu quý khách từ chối mua hàng.
+
+Nếu vì bất cứ lý do khách quan nào, LIKEWATCH không thể đặt hàng, chúng tôi cam kết sẽ hoàn lại 100% tiền đặt cọc cho quý khách.
+
+LIKEWATCH chỉ chấp nhận thanh toán thông qua tiền mặt, chuyển khoản hoặc thẻ ngân hàng bằng tiền đồng Việt Nam (VND).
+
+Mua hàng thanh toán trả góp
+
+Hiện tại, hầu hết ngân hàng đều cung cấp hình thức mua hàng thanh toán trả góp dành cho chủ thẻ tín dụng. Quý khách có thể liên hệ với ngân hàng phát hành thẻ để được hướng dẫn cách thức mua hàng thanh toán trả góp.
+
+Chương trình giảm giá
+
+Xin quý khách lưu ý rằng LIKEWATCH không chấp nhận điều chỉnh giá bán cho bất kỳ sản phẩm hoặc/và đơn hàng đã được mua ở một mức giá khác so với chương trình giảm giá đang diễn ra.
+
+Một số lưu ý
+
+Để chiếc đồng hồ luôn sáng đẹp, có tuổi thọ cao và phục vụ quý khách lâu dài, quý khách nên tham khảo thêm về cách Bảo quản đồng hồ.
+
+Tài khoản ngân hàng của công ty
+
+Chủ tài khoản: Công ty Cổ Phần Trang Sức và Đồng Hồ Thụy Sĩ
+
+Số tài khoản: 198200589
+
+Mở tại Ngân hàng TMCP Á Châu (ACB)
+                      </textarea>
+                      <script>
+                          CKEDITOR.replace( 'editor2' );
+                      </script>
+                  </div>
+                  
+                </form>
+              </div>
+              <div class="modal-footer"> <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Sửa" href="#">Sửa</a> <a data-dismiss="modal" class="btn tip-top" data-original-title="Hủy" href="#">Hủy</a> </div>
+                    </div>
+                    <button class="btn tip-top" data-original-title="Xóa Thương Hiệu"><ul><li><i class="icon-repeat"></i></li></ul></button>
+                  </div>
+
+                  </td>
+                  <td class="o-giua"><ul><li><i class="icon-remove tip-top" data-original-title="Hiện Có"></i></li></ul></td>
+                </tr>
+                
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2012 &copy; Marutii Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
+</div>
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/maruti.js"></script> 
+<script src="js/maruti.tables.js"></script>
+<script type="text/javascript" src="js/backend_js.js"></script>
+</body>
+</html>
