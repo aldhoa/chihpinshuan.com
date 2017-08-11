@@ -10,6 +10,11 @@ use Cake\View\Exception\MissingTemplateException;
 class AdminController extends AppController
 {
    public function index(){
-    echo 'Admin Controller';
+   $this->loadModel('Admin');
+   $data = $this->Admin->find()->first()->toArray();
+   echo '<pre>';
+   print_r($data);
+   echo '</pre> Luu Duc Hoa';
+   die;
    }
 }
