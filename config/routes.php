@@ -53,7 +53,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     //config admin
     Router::prefix('admin', function ($routes) {
-     
+        $routes->connect('/project', ['controller' => 'Admin', 'action' => 'project']);
         $routes->connect('/', ['controller' => 'Admin', 'action' => 'index']);
     });
 

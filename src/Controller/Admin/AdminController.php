@@ -17,4 +17,11 @@ class AdminController extends AppController
    echo '</pre> Luu Duc Hoa';
    die;
    }
+
+   public function project(){
+      $this->loadModel('Admin');
+      $this->set('title', 'Cripy Pork Jerky');
+   $data = $this->Admin->find()->all()->toArray();
+   $this->set('data', $data);
+   }
 }

@@ -1,0 +1,109 @@
+.my-btn-icon-pg ul li
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+	min-width: 25px;
+	list-style: none;
+}
+
+.my-btn-icon-pg tr td.o-giua
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.my-plus-btn-icon-pg ul li
+{
+	border: none;
+}
+
+/*#content-header.thuong-hieu .widget-content, #content-header.dong-ho .widget-content,*/
+#content-header .widget-content,
+.o-giua .widget-content
+{
+	border-bottom: none;
+}
+
+.my-btn-icon-pg label:first-child div.radio
+{
+	margin-left: 10px;
+}
+
+#content-header .widget-content
+{
+	margin-left: 5px;
+}
+
+/*tbody tr:nth-child(even) td:nth-child(1), tbody tr:nth-child(odd) td:nth-child(1)
+{
+	width: 50px;
+}*/
+/*.thuong-hieu tr:nth-child(even) td:nth-child(1), .thuong-hieu tr:nth-child(odd) td:nth-child(1),
+.dong-ho tr:nth-child(even) td:nth-child(1), .dong-ho tr:nth-child(odd) td:nth-child(1),
+.thuong-hieu-dang-sale tr:nth-child(even) td:nth-child(1), .thuong-hieu-dang-sale tr:nth-child(odd) td:nth-child(1),
+.thuong-hieu-het-han-sale tr:nth-child(even) td:nth-child(1), .thuong-hieu-het-han-sale tr:nth-child(odd) td:nth-child(1),
+.dong-ho-dang-sale tr:nth-child(even) td:nth-child(1), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(1)
+{
+	width: 50px;
+}*/
+
+/*.dong-ho-dang-sale tr:nth-child(even) td:nth-child(4), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(4)
+{
+	width: 10px;
+}
+
+.dong-ho tr:nth-child(even) td:nth-child(5), .dong-ho tr:nth-child(odd) td:nth-child(5),
+.dong-ho-dang-sale tr:nth-child(even) td:nth-child(5), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(5)
+{
+	width: 60px;
+}
+
+.dong-ho tr:nth-child(even) td:nth-child(2), .dong-ho tr:nth-child(odd) td:nth-child(2),
+.dong-ho tr:nth-child(even) td:nth-child(3), .dong-ho tr:nth-child(odd) td:nth-child(3),
+.dong-ho-dang-sale tr:nth-child(even) td:nth-child(2), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(2),
+.dong-ho-dang-sale tr:nth-child(even) td:nth-child(3), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(3)
+{
+	width: 40px;
+}
+
+.dong-ho tr:nth-child(even) td:nth-child(4), .dong-ho tr:nth-child(odd) td:nth-child(4)
+{
+	width: 20px;
+}
+
+.dong-ho tr:nth-child(even) td:nth-child(6), .dong-ho tr:nth-child(odd) td:nth-child(6)
+{
+	width: 320px;
+}*/
+
+/*.thuong-hieu-dang-sale tr:nth-child(even) td:nth-child(4), .thuong-hieu-dang-sale tr:nth-child(odd) td:nth-child(4),
+.dong-ho-dang-sale tr:nth-child(even) td:nth-child(5), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(5),
+.thuong-hieu-het-han-sale tr:nth-child(even) td:nth-child(4), .thuong-hieu-het-han-sale tr:nth-child(odd) td:nth-child(4), 
+.dong-ho-het-han-sale tr:nth-child(even) td:nth-child(5), .dong-ho-het-han-sale tr:nth-child(odd) td:nth-child(5)
+{
+	background-color: red;
+	font-weight: bold;
+}*/
+
+.dong-ho textarea
+{
+	resize: vertical;
+}
+
+.thuong-hieu-het-sale, .dong-ho-het-sale
+{
+	margin-left: 20px;
+}
+
+.don-hang .widget-content:nth-child(2)
+{
+	border-bottom: 1px solid #cdcdcd;
+}
+
+.trang textarea
+{
+	width: 500px;
+	height: 300px;
+	resize: vertical;
+}
