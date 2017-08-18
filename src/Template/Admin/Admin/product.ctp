@@ -14,13 +14,12 @@
   <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
 </div>
 <!--close-top-Header-menu-->
-  
 </div>
 <div id="content">
   <div id="content-header">
     <div id="breadcrumb">  <a href="#" class="current">Cripy Pork Jerky</a> </div>
     <h1>Cripy Pork Jerky</h1>
-    <div class="widget-content"><a href="add" data-toggle="modal"> <button class="btn tip-top btn-icon-pg my-plus-btn-icon-pg" data-original-title="Thêm Sản Phẩm"><ul><li><i class="icon-plus"></i>Thêm Sản Phẩm </li></ul></button> </a>
+    <div class="widget-content"><a href="" data-toggle="modal"> <button class="btn tip-top btn-icon-pg my-plus-btn-icon-pg" data-original-title="Thêm Sản Phẩm"><ul><li><i class="icon-plus"></i>Thêm Sản Phẩm </li></ul></button> </a>
   
             <div id="them-dong-ho" class="modal hide">
               <div class="modal-header">
@@ -76,60 +75,25 @@
               <?php 
                 foreach ($data as $key => $value) {
                   ?>
-<tr>
-                  <td><?php echo $value['id']; ?></td>
-                  <td><?php echo $value['name']; ?></td>
-                  <td><?php echo $this->Html->image($value['image_1']); ?></td>
-                  <td><?php echo $value['note']; ?></td>
-                  <td><?php echo $value['price']; ?></td>
-                  <td class="o-giua">
-                    <div class="widget-content"><a href="#1" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa Thương Hiệu"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
+                  <tr>
+                    <td><?php echo $value['id']; ?></td>
+                    <td><?php echo $value['name']; ?></td>
+                   <td><?php echo $this->Html->image($value['image_1']); ?></td>
+                   <td><?php echo $value['note']; ?></td>
+                    <td><?php echo $value['price']; ?></td>
+                   <td class="o-giua">
+                    <div class="widget-content"><a href="edit" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
   
                     <div id="1" class="modal hide">
                       <div class="modal-header">
                         <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>
-                        <h3>Sửa Đồng Hồ</h3>
                       </div>
-                      <div class="modal-body">
-                        <form action="#" method="get" class="form-horizontal">
-                          <div class="control-group">
-                            <label class="control-label">Tên :</label>
-                            <div class="controls"><input class="span9" type="text" placeholder="Tên" value="VERSACE WOMEN'S DV-25 ROUND LADY" /></div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label">Thương Hiệu :</label>
-                            <div class="controls"><input class="span9" type="text" placeholder="Thương Hiệu" value="VERSACE" /></div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label">Loại :</label>
-                            <div class="controls">
-                              <label><input type="radio" name="radios" checked /> Nam</label>
-                              <label><input type="radio" name="radios" /> Nữ</label>
-                            </div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label">Hình Ảnh Hiện Tại :</label>
-                            <div class="controls"><?php echo $this->Html->image('/webroot/admin/img/demo/av3.jpg'); ?></div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label">Chọn Hình Ảnh Mới :</label>
-                            <div class="controls">
-                              <input type="file" />
-                            </div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label">Thông Tin Đồng Hồ :</label>
-                            <div class="controls">
-                              <textarea class="span9" placeholder="Thông Tin Đồng Hồ" >Rất đẹp, rất sang trọng, đẳng cấp</textarea>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="modal-footer"> <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Sửa" href="#">Sửa</a> <a data-dismiss="modal" class="btn tip-top" data-original-title="Hủy" href="#">Hủy</a> </div>
+                        <div class="modal-footer"> 
+                         <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Sửa" href="#">Sửa</a> <a data-dismiss="modal" class="btn tip-top" data-original-title="Hủy" href="#">Hủy</a> 
+                        </div>
                     </div>
-                    <button class="btn tip-top" data-original-title="Khôi Phục Đồng Hồ"><ul><li><i class="icon-trash"></i></li></ul></button>
+                    <button class="btn tip-top" data-original-title="delete"><ul><li><i class="icon-trash"></i></li></ul></button>
                   </div>
-
                   </td>
                   <td class="o-giua"><ul><li><i class="icon-ok tip-top" data-original-title="Hiện Có"></i></li></ul></td>
                 </tr>
@@ -141,8 +105,6 @@
             </table>
           </div>
         </div>
-
-        
       </div>
     </div>
   </div>

@@ -39,4 +39,24 @@ class AdminController extends AppController
       }
    }
 
+   public function edit (){
+      $this->loadModel('Admin');
+      $this->set('title', 'Cripy Pork Jerky');
+      if ($this->request->is('post')) {
+
+      $adminTable = TableRegistry::get('Admin');
+      $product = $adminTable->newEntity();
+
+      $data = $this->request->data;
+
+      $product->name = $data['name'];
+      $product->note = $data['note'];
+      $product->price = $data['price'];
+
+      if ($adminTable->save($product)) {
+          // The $article entity contains the id now
+          $id = $product->id;
+      }
+      }
+   }
 }

@@ -21,17 +21,17 @@
     <h1>Cripy Pork Jerky</h1>
     <div class="container">
     <!-- add new product -->
-  <h2>Thêm Sản Phẩm</h2>
-  <form action="add" method="post" enctype="multipart/form-data" >
+  <h2>Sửa Sản Phẩm</h2>
+  <form action="edit" method="post" enctype="multipart/form-data" >
 
     <div class="form-group">
       <label for="name">Tên Sản Phẩm:</label>
-      <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+      <input type="name" class="form-control" id="name" placeholder="Enter name" name="name" value=<?php echo $value['name']; ?>>
     </div>
 
     <div class="form-group">
       <label for="note">Thông Tin Sản :</label>
-      <input type="note" class="form-control" id="note" placeholder="Enter note" name="note">
+      <input type="note" class="form-control" id="note" placeholder="Enter note" name="note" value=<?php echo $value['note'];?>>
     </div>
 
     <div class="form-group">
@@ -44,7 +44,8 @@
         <input type="file" class="form-control" id="image" placeholder="image" name="image">
     </div>
 
-    <button type="submit" class="btn btn-default">Thêm Sản Phẩm</button>
+
+    <button type="submit" class="btn btn-default">Lưu Thay Đổi</button>
   </form>
 </div>
   </div>

@@ -18990,3 +18990,402 @@ Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 105
 
 
 
+2017-08-18 13:16:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:16:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:17:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:17:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:21:26 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:21:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:22:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:22:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:24:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:24:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:36:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Webroot could not be found.
+Request URL: /webroot/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:36:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Request URL: /css/cake.css
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/webroot/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:36:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Request URL: /css/base.css
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/webroot/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(93): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:37:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:37:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:40:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:40:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:40:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:40:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2017-08-18 13:40:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Request URL: /img/
+Referer URL: http://localhost:8888/Cripy%20pork%20jerky/admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
