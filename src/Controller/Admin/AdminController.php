@@ -9,9 +9,14 @@ use Cake\ORM\TableRegistry;
 
 class AdminController extends AppController {
 
+
+  public function login () {
+  $this->loadModel('Admin'); 
+    
+  }
+
   public function product() { 
-    $this->loadModel('Admin'); 
-    $this->set('title', 'Cripy Pork Jerky');
+    $this->loadModel('Admin');
     $data = $this->Admin->find()->where(['status' => 1])->all()->toArray();
     $this->set('data', $data);
   }
@@ -63,12 +68,5 @@ class AdminController extends AppController {
     $product->id = $id;
     $productTable->save($product);
     $this->redirect(['action' => 'product']);
-  }
-
-    public function login () {
-    $this->loadModel('Admin'); 
-    $this->set('title', 'Cripy Pork Jerky');
-    $data = $this->Admin->find()->where(['status' => 1])->all()->toArray();
-    $this->set('data', $data);
   }
 }
