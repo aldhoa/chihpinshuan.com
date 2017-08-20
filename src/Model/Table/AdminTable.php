@@ -3,6 +3,7 @@ namespace App\Model\Table;
 
 use Cake\ORM\Table;
 
+
 class AdminTable extends Table
 {
 
@@ -10,6 +11,6 @@ class AdminTable extends Table
     {
         $this->table('product');
     }
-
+	
 }
 ?>

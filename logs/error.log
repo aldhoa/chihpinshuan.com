@@ -25494,3 +25494,1173 @@ Stack Trace:
 #15 {main}
 
 
+2017-08-20 13:07:30 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+      'isAjax' => false,
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:08:28 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+      'isAjax' => false,
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:09:39 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+      'isAjax' => false,
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:10:04 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+      'isAjax' => false,
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:10:11 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+      'isAjax' => false,
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:10:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin could not be found.
+Exception Attributes: array (
+  'class' => 'Admin',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /admin/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(70): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(90): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-08-20 13:10:14 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+      'isAjax' => false,
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:10:30 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+      'isAjax' => false,
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:15:19 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:15:34 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:16:25 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:18:01 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:21:28 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:22:11 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:22:46 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:23:45 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'method' => 'get',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:23:50 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'method' => 'get',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:24:22 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+
+2017-08-20 13:28:45 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "array (
+  'controller' => 'Users',
+  'action' => 'login',
+  'plugin' => NULL,
+  'prefix' => 'admin',
+  '_ext' => NULL,
+)" could not be found.
+Exception Attributes: array (
+  'url' => 'array (
+  \'controller\' => \'Users\',
+  \'action\' => \'login\',
+  \'plugin\' => NULL,
+  \'prefix\' => \'admin\',
+  \'_ext\' => NULL,
+)',
+  'context' => 
+  array (
+    '_base' => '/Cripy%20pork%20jerky',
+    '_port' => '8888',
+    '_scheme' => 'http',
+    '_host' => 'localhost:8888',
+    'params' => 
+    array (
+      'pass' => 
+      array (
+      ),
+      'controller' => 'Admin',
+      'action' => 'login',
+      'prefix' => 'admin',
+      'plugin' => NULL,
+      '_matchedRoute' => '/admin/login',
+    ),
+  ),
+)
+Request URL: /admin/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(669): Cake\Routing\RouteCollection->match(Array, Array)
+#1 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Router.php(786): Cake\Routing\Router::url(Array)
+#2 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(441): Cake\Routing\Router::normalize(Array)
+#3 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(301): Cake\Controller\Component\AuthComponent->_isLoginAction(Object(App\Controller\Admin\AdminController))
+#4 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php(268): Cake\Controller\Component\AuthComponent->authCheck(Object(Cake\Event\Event))
+#5 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(414): Cake\Controller\Component\AuthComponent->startup(Object(Cake\Event\Event))
+#6 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventManager.php(391): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#7 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Event/EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#8 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Controller/Controller.php(506): Cake\Controller\Controller->dispatchEvent('Controller.star...')
+#9 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(114): Cake\Controller\Controller->startupProcess()
+#10 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\AdminController))
+#11 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php(52): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /Applications/MAMP/htdocs/Cripy pork jerky/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 /Applications/MAMP/htdocs/Cripy pork jerky/webroot/index.php(37): Cake\Http\Server->run()
+#24 {main}
+
+

@@ -1,21 +1,57 @@
 <?php
 namespace App\Controller\Admin;
 use App\Controller\AppController;
-use Cake\Core\Configure;
-use Cake\Network\Exception\ForbiddenException;
-use Cake\Network\Exception\NotFoundException;
-use Cake\View\Exception\MissingTemplateException;
 use Cake\ORM\TableRegistry;
+use Cake\Event\Event;
 
 class AdminController extends AppController {
-
-  public function login () {
-    if ($this->request->is('post')) {
-      echo 1;die;
-      $this->loadModel('Admin');
-
+    
+      public function initialize()
+    {
+        $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'loginRedirect' => [
+                'controller' => 'Admin',
+                'action' => 'product'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Admin',
+                'action' => 'logout'
+            ]
+        ]);
     }
-  }
+
+    public function beforeFilter(Event $event)
+    {
+        $this->Auth->allow(['index', 'view', 'display']);
+    }
+
+
+  // public function login () {
+  //   if ($this->request->is('post')) {
+  //     $this->loadModel('Admin');
+  //     $username = $this->request->params['username'];
+  //     $passwork = $this->request->params['passwork'];
+
+  //   }
+  // }
+
+   public function login()
+    {
+        if ($this->request->is('post')) {
+            $user = $this->Auth->identify();
+            if ($user) {
+                $this->Auth->setUser($user);
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('Invalid username or password, try again'));
+        }
+    }
+
+    public function logout()
+    {
+        return $this->redirect($this->Auth->logout());
+    }
 
   public function product() { 
     $this->loadModel('Admin');
