@@ -53,9 +53,10 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     //config admin
     Router::prefix('admin', function ($routes) {
-        $routes->connect('/', ['controller' => 'Admin', 'action' => 'product']);
+        $routes->connect('/product', ['controller' => 'Admin', 'action' => 'product']);
         $routes->connect('/add', ['controller' => 'Admin', 'action' => 'add']);
-        $routes->connect('/edit', ['controller' => 'Admin', 'action' => 'edit']);
+        $routes->connect('/edit/:id', ['controller' => 'Admin', 'action' => 'edit']);
+        $routes->connect('/delete/:id', ['controller' => 'Admin', 'action' => 'delete']);
     });
 
     //config web
