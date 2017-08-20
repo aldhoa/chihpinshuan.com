@@ -57,6 +57,7 @@ Router::scope('/', function (RouteBuilder $routes) {
         $routes->connect('/add', ['controller' => 'Admin', 'action' => 'add']);
         $routes->connect('/edit/:id', ['controller' => 'Admin', 'action' => 'edit']);
         $routes->connect('/delete/:id', ['controller' => 'Admin', 'action' => 'delete']);
+        $routes->connect('/login', ['controller' => 'Admin', 'action' => 'login']);
     });
 
     //config web
