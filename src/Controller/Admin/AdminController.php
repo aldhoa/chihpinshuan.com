@@ -64,4 +64,11 @@ class AdminController extends AppController {
     $productTable->save($product);
     $this->redirect(['action' => 'product']);
   }
+
+    public function login () {
+    $this->loadModel('Admin'); 
+    $this->set('title', 'Cripy Pork Jerky');
+    $data = $this->Admin->find()->where(['status' => 1])->all()->toArray();
+    $this->set('data', $data);
+  }
 }
