@@ -18,7 +18,8 @@
     <div id="content-header">
       <div id="breadcrumb">  <a href="#" class="current">Cripy Pork Jerky</a> </div>
       <h1>Cripy Pork Jerky</h1>
-      <div class="widget-content"><a href="" data-toggle="modal"> <button class="btn tip-top btn-icon-pg my-plus-btn-icon-pg" data-original-title="Thêm Sản Phẩm"><ul><li><i class="icon-plus"></i>Thêm Sản Phẩm </li></ul></button> </a>
+      <div class="widget-content">
+      <a href="<?php echo $this->Url->build(["controller" => "admin", "action" => "add"]); ?>" data-toggle="modal"> <button class="btn tip-top btn-icon-pg my-plus-btn-icon-pg" data-original-title="add" ><ul><li><i class="icon-plus"></i>Thêm Sản Phẩm </li></ul></button> </a>
         <div id="them-dong-ho" class="modal hide">
 
           <div class="modal-header">
@@ -83,7 +84,7 @@
                     <td><?php echo $value['note']; ?></td>
                     <td><?php echo $value['price']; ?></td>
                     <td class="o-giua">
-                      <div class="widget-content"><a href="edit/<?php echo $value['id']; ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
+                      <div class="widget-content"><a href="<?php echo $this->Url->build(["controller" => "admin", "action" => "add", "id"=>$value['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
 
                       <div id="1" class="modal hide">
                         <div class="modal-header">

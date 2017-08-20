@@ -9,10 +9,12 @@ use Cake\ORM\TableRegistry;
 
 class AdminController extends AppController {
 
-
   public function login () {
-  $this->loadModel('Admin'); 
-    
+    if ($this->request->is('post')) {
+      echo 1;die;
+      $this->loadModel('Admin');
+
+    }
   }
 
   public function product() { 
@@ -31,7 +33,6 @@ class AdminController extends AppController {
       $product->note = $data['note'];
       $product->price = $data['price'];
       if ($adminTable->save($product)) {
-        // The $article entity contains the id now
         $id = $product->id;
       }
     }

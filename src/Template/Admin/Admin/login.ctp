@@ -58,7 +58,7 @@
 
   <h2>Cripy Pork Jerky</h2>
 
-  <form action="/action_page.php" method="post" class="form-horizontal">
+  <form action="#" method="post" class="form-horizontal">
 
     <div class="container">
       <label><b>Username</b></label>
