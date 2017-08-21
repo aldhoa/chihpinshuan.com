@@ -20,7 +20,7 @@ class AdminController extends AppController {
             ],
             'loginRedirect' => [
             'controller' => 'Product',
-            'action' => 'produt'
+            'action' => 'product'
             ],
             'logoutRedirect' => [
             'controller' => 'user',

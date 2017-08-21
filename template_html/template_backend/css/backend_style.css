@@ -35,56 +35,6 @@
 	margin-left: 5px;
 }
 
-/*tbody tr:nth-child(even) td:nth-child(1), tbody tr:nth-child(odd) td:nth-child(1)
-{
-	width: 50px;
-}*/
-/*.thuong-hieu tr:nth-child(even) td:nth-child(1), .thuong-hieu tr:nth-child(odd) td:nth-child(1),
-.dong-ho tr:nth-child(even) td:nth-child(1), .dong-ho tr:nth-child(odd) td:nth-child(1),
-.thuong-hieu-dang-sale tr:nth-child(even) td:nth-child(1), .thuong-hieu-dang-sale tr:nth-child(odd) td:nth-child(1),
-.thuong-hieu-het-han-sale tr:nth-child(even) td:nth-child(1), .thuong-hieu-het-han-sale tr:nth-child(odd) td:nth-child(1),
-.dong-ho-dang-sale tr:nth-child(even) td:nth-child(1), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(1)
-{
-	width: 50px;
-}*/
-
-/*.dong-ho-dang-sale tr:nth-child(even) td:nth-child(4), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(4)
-{
-	width: 10px;
-}
-
-.dong-ho tr:nth-child(even) td:nth-child(5), .dong-ho tr:nth-child(odd) td:nth-child(5),
-.dong-ho-dang-sale tr:nth-child(even) td:nth-child(5), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(5)
-{
-	width: 60px;
-}
-
-.dong-ho tr:nth-child(even) td:nth-child(2), .dong-ho tr:nth-child(odd) td:nth-child(2),
-.dong-ho tr:nth-child(even) td:nth-child(3), .dong-ho tr:nth-child(odd) td:nth-child(3),
-.dong-ho-dang-sale tr:nth-child(even) td:nth-child(2), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(2),
-.dong-ho-dang-sale tr:nth-child(even) td:nth-child(3), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(3)
-{
-	width: 40px;
-}
-
-.dong-ho tr:nth-child(even) td:nth-child(4), .dong-ho tr:nth-child(odd) td:nth-child(4)
-{
-	width: 20px;
-}
-
-.dong-ho tr:nth-child(even) td:nth-child(6), .dong-ho tr:nth-child(odd) td:nth-child(6)
-{
-	width: 320px;
-}*/
-
-/*.thuong-hieu-dang-sale tr:nth-child(even) td:nth-child(4), .thuong-hieu-dang-sale tr:nth-child(odd) td:nth-child(4),
-.dong-ho-dang-sale tr:nth-child(even) td:nth-child(5), .dong-ho-dang-sale tr:nth-child(odd) td:nth-child(5),
-.thuong-hieu-het-han-sale tr:nth-child(even) td:nth-child(4), .thuong-hieu-het-han-sale tr:nth-child(odd) td:nth-child(4), 
-.dong-ho-het-han-sale tr:nth-child(even) td:nth-child(5), .dong-ho-het-han-sale tr:nth-child(odd) td:nth-child(5)
-{
-	background-color: red;
-	font-weight: bold;
-}*/
 
 .dong-ho textarea
 {
@@ -107,3 +57,24 @@
 	height: 300px;
 	resize: vertical;
 }
+.user_logout {
+	color: white;
+    padding: 20px 25px;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
