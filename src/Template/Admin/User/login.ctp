@@ -1,4 +1,4 @@
-    <style>
+<style>
   input[type=text], input[type=password] {
       width: 100%;
       padding: 12px 20px;
@@ -15,17 +15,14 @@
       margin: 8px 0;
       border: none;
       cursor: pointer;
-      width: 100%;
+      width: 50%;
   }
 
   button:hover {
       opacity: 0.8;
   }
 
-  .cancelbtn {
-      width: auto;
-      padding: 10px 18px;
-      background-color: #f44336;
+ background-color: #f44336;
   }
 
   .imgcontainer {
@@ -56,15 +53,21 @@
          width: 100%;
       }
   }
-  </style>
+</style>
 
-  <div id="content">
-  <h3 style="text-align: center;">Login</h3>
-   <?php if(isset($login_error_msg)): ?>
-      <div class="form-group has-error">
-          <label style="word-break:break-all;" class="col-xs-12 col-sm-12 col-md-12 help-block"><?php echo $login_error_msg?></label>
-      </div>                            
-      <?php endif; ?>
+<!--top-Header-messaages-->
+<div class="btn-group rightzero"> 
+  <a class="top_message tip-left" title="Manage Files"><i class="icon-file"></i></a>
+  <a class="top_message tip-bottom" title="Manage Users"><i class="icon-user"></i></a> 
+  <a class="top_message tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a>
+  <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a> 
+</div>
+<!--close-top-Header-messaages--> 
+
+<div id="content">
+
+  <h2>Cripy Pork Jerky</h2>
+
   <form action="#" method="post" class="form-horizontal">
       <label><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="username" required>

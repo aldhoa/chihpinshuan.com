@@ -1,7 +1,11 @@
 <!--top-Header-messaages-->
 <div class="btn-group rightzero"> 
-<a class="top_message tip-left" title="Manage Files"><i class="icon-file"></i></a> <a class="top_message tip-bottom" title="Manage Users"><i class="icon-user"></i></a> <a class="top_message tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a> <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a> </div>
-  <!--close-top-Header-messaages--> 
+  <a class="top_message tip-left" title="Manage Files"><i class="icon-file"></i></a>
+  <a class="top_message tip-bottom" title="Manage Users"><i class="icon-user"></i></a> 
+  <a class="top_message tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a>
+  <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a> 
+</div>
+<!--close-top-Header-messaages--> 
 
   <!--top-Header-menu-->
   <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Danh Mục Quản Lý</a>
@@ -30,7 +34,6 @@
           </div>
 
           <div class="modal-body">
-
             <form action="#" method="get" class="form-horizontal">
 
               <div class="control-group">
@@ -43,16 +46,19 @@
                 <div class="controls"> <input type="file" /> </div>
               </div>
 
-            <div class="control-group">
-              <label class="control-label">Thông Tin Sản Phẩm :</label>
-              <div class="controls"> <textarea class="span3" placeholder="Thông Tin Sản Phẩm" ></textarea> </div>
-            </div>
+              <div class="control-group">
+                <label class="control-label">Thông Tin Sản Phẩm :</label>
+                <div class="controls"> <textarea class="span3" placeholder="Thông Tin Sản Phẩm" ></textarea> </div>
+              </div>
 
             </form>
-
           </div>
 
-        <div class="modal-footer"> <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Thêm" href="#">Thêm</a> <a data-dismiss="modal" class="btn tip-top" data-original-title="Hủy" href="#">Hủy</a> </div>
+          <div class="modal-footer"> 
+            <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Thêm" href="#">Thêm</a>
+            <a data-dismiss="modal" class="btn tip-top" data-original-title="delete" href="#">Hủy</a> 
+          </div>
+
         </div>
       </div>
     </div>
