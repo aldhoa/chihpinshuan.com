@@ -43,7 +43,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   echo $this->Html->css('/admin/css/maruti-style');
   echo $this->Html->css('/admin/css/select2');
   echo $this->Html->css('/admin/css/uniform');
-
+  
   echo $this->Html->script('/admin/js/jquery.min');
 ?>
 </head>
