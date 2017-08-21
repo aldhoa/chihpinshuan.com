@@ -29,6 +29,7 @@ class ProductController extends AppController {
       $product->price = $data['price'];
       if ($productTable->save($product)) {
         $id = $product->id;
+        $this->redirect(['action' => 'product']);
       }
     }
   }

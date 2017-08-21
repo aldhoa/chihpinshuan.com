@@ -1,5 +1,6 @@
 <!--top-Header-messaages-->
-<div class="btn-group rightzero"> <a class="top_message tip-left" title="Manage Files"><i class="icon-file"></i></a> <a class="top_message tip-bottom" title="Manage Users"><i class="icon-user"></i></a> <a class="top_message tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a> <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a> </div>
+<div class="btn-group rightzero"> 
+<a class="top_message tip-left" title="Manage Files"><i class="icon-file"></i></a> <a class="top_message tip-bottom" title="Manage Users"><i class="icon-user"></i></a> <a class="top_message tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a> <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a> </div>
   <!--close-top-Header-messaages--> 
 
   <!--top-Header-menu-->
@@ -9,6 +10,7 @@
       <li> <a href="watches.html"><i class="icon icon-time"></i> <span>Cripy Pork Jerky</span></a> </li>
     </ul>
   </div>
+
   <div id="search">
     <input type="text" placeholder="Search here..."/>
     <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
@@ -19,7 +21,7 @@
       <div id="breadcrumb">  <a href="#" class="current">Cripy Pork Jerky</a> </div>
       <h1>Cripy Pork Jerky</h1>
       <div class="widget-content">
-      <a href="<?php echo $this->Url->build(["controller" => "admin", "action" => "add"]); ?>" data-toggle="modal"> <button class="btn tip-top btn-icon-pg my-plus-btn-icon-pg" data-original-title="add" ><ul><li><i class="icon-plus"></i>Thêm Sản Phẩm </li></ul></button> </a>
+      <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "add"]); ?>" data-toggle="modal"> <button class="btn tip-top btn-icon-pg my-plus-btn-icon-pg" data-original-title="add" ><ul><li><i class="icon-plus"></i>Thêm Sản Phẩm </li></ul></button> </a>
         <div id="them-dong-ho" class="modal hide">
 
           <div class="modal-header">
@@ -84,7 +86,7 @@
                     <td><?php echo $value['note']; ?></td>
                     <td><?php echo $value['price']; ?></td>
                     <td class="o-giua">
-                      <div class="widget-content"><a href="<?php echo $this->Url->build(["controller" => "admin", "action" => "add", "id"=>$value['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
+                      <div class="widget-content"><a href="<?php echo $this->Url->build(["controller" => "product", "action" => "edit", "id"=>$value['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
 
                       <div id="1" class="modal hide">
                         <div class="modal-header">
