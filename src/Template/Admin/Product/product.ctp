@@ -98,7 +98,7 @@
                         </div>
                       </div>
 
-                      <a class="btn tip-top" type="submit" data-original-title="delete" href="delete/<?php echo $value['id']; ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
+                      <a class="btn tip-top" type="submit" data-original-title="delete" href="<?php echo $this->Url->build(["controller" => "product", "action" => "delete", "id"=>$value['id']]); ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
 
                       </div>
                     </td>
