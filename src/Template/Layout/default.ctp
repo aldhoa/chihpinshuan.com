@@ -50,12 +50,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <?= $this->Flash->render() ?>
     <!--Header-part-->
-        <div id="header">
+    <div id="header">
         <h1><a href="dashboard.html">Cripy Pork Jerky</a></h1>
     </div>
     <!--close-Header-part--> 
     <?= $this->fetch('content') ?>
-    <div id="footer" class="span12"> 2012 &copy; Marutii Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
+    <div id="footer" class="span12"> 2017 &copy; Cripy Pork Jerky Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> 
+    </div>
 </div>
 </body>
 </html>

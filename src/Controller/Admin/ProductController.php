@@ -1,10 +1,9 @@
 <?php
 namespace App\Controller\Admin;
-use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 use Cake\Event\Event;
 
-class ProductController extends AppController {
+class ProductController extends AdminController {
     
       public function initialize()
     {
