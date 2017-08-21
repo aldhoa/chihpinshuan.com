@@ -10,6 +10,12 @@ use Cake\View\Exception\MissingTemplateException;
 class WebController extends AppController
 {
 
+	  public function initialize()
+    {
+        parent::initialize();
+        $this->viewBuilder()->setLayout('web');
+    }
+
    public function index(){
     echo 'Web Controller';
    }
