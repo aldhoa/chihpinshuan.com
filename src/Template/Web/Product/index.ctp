@@ -1,7 +1,38 @@
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
 <?php echo $this->Html->script('/web/include/jscode/js-image-slider'); ?>
 <?php echo $this->Html->css('/web/css/slider'); ?>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  margin: 0px;
+}
+nav {
+  margin-top: 40px;
+  padding: 24px;
+  text-align: center;
+  font-family: Raleway;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
 
+#nav-3 {
+  background: #EEA200;
+}
+
+
+.link-3 {
+  transition: 0.4s;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+.link-3:hover {
+  background-color: #ffffff;
+  color: #EEA200;
+  padding: 24px 10px;
+}
+</style>
 <div class="Wrapper">
 
         <div class="header-top">
@@ -13,8 +44,16 @@
                 <a href="javascript:window.external.AddFavorite('/','爵林花生糖')">加入最愛</a>
             </div>
         </div>
-       
+        
+
+            <nav id="nav-3">
+              <a class="link-3" href="#">Home</a>
+              <a class="link-3" href="#">About</a>
+              <a class="link-3" href="#">Contact</a>
+              <a class="link-3" href="#">Shop</a>
+            </nav>
             <div id="sliderFrame">
+
                 <div id="slider">
                 <a href="#">
               
@@ -38,12 +77,15 @@
                 </a>
              
                 </div>
+
                 <div id="htmlcaption1" style="display: none;">
                 Image Slider by: <a href="http://github.com/saumya04" target="_blank">github.com/saumya04</a>
                 </div>
+
                 <div id="htmlcaption2" style="display: none;">
                 <a href="http://www.w3schools.com/css/" target="_blank">CSS</a>&nbsp;&&nbsp;<a href="http://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a> Rocks.
                 </div>
+
             </div>
 
     <div class="Middle">
