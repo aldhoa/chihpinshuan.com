@@ -1,53 +1,3 @@
-<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
-<?php echo $this->Html->script('/web/include/jscode/js-image-slider'); ?>
-<?php echo $this->Html->css('/web/css/slider'); ?>
-<?php echo $this->Html->css('/web/css/menu'); ?>
-
-<div class="Wrapper">
-        <div class="header-top">
-            <div class="top-cart">
-                <a href="index.php?action=order">購物車</a>
-            </div>
-            <div class="top-home">
-                <a href="index.php">返回首頁</a>
-                <a href="javascript:window.external.AddFavorite('/','爵林花生糖')">加入最愛</a>
-            </div>
-        </div>
-            <nav id="nav-3">
-              <a class="link-3" href="#">Home</a>
-              <a class="link-3" href="#">About</a>
-              <a class="link-3" href="#">Contact</a>
-              <a class="link-3" href="#">Shop</a>
-            </nav>
-            <div id="sliderFrame">
-
-                <div id="slider">
-                <a href="#">
-              
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food01.jpg'); ?>
-                </a>
-                <a href="#">
-               
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food02.jpg'); ?>
-                </a>
-                <a href="#">
-              
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food03.jpg'); ?>
-                </a>
-                <a href="#">
-              
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food04.jpg'); ?>
-                </a>
-                <a href="#">
-               
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food05.jpg'); ?>
-                </a>
-             
-                </div>
-
-            </div>
-
-    <div class="Middle">
 <div class="Lefter">
      	  <!-- <div class="ContentTitle"></div> -->
           <div class="About">
@@ -58,6 +8,8 @@
 <p>&nbsp;</p>
 <p><span style="color: #ff0000"><span style="font-size: large"> 士林夜市分店:士林觀光夜市一樓攤位</span></span><br />
 &nbsp; <span style="color: #ff0000"><span style="font-size: large">174-180-186號歡迎舊雨新知蒞臨！</span></span></p>
+
+
 <h2><span id="1363201223601E" style="display: none">&nbsp;<span id="1363201272054S" style="display: none">&nbsp;</span><span id="1363201280685S" style="display: none">&nbsp;</span><span id="1363201296100S" style="display: none">&nbsp;<br />
 <br />
 </span><span style="color: #000000"><span id="1363201296100S" style="display: none"><span style="font-size: medium">爵林花生糖創立於士林夜市1978年，三十多年來靠著每天現場<br />
@@ -87,64 +39,6 @@
 <p><br />
 &nbsp;</p>
 <p>&nbsp;</p>
-<p><span style="font-size: large">&nbsp;</span></p>          </div>
+<p><span style="font-size: large">&nbsp;</span></p></div>
       </div>       
 	    
-<div class="Righter">
-	<div class="ListTitle"></div>
-	<div class="List">
-									<div><a href="index.php?action=product_detail&pid=15" class="SubMenu1">爵林杏仁酥</a></div>
-												<div><a href="index.php?action=product_detail&pid=7" class="SubMenu1">爵林南瓜酥</a></div>
-												<div><a href="index.php?action=product_detail&pid=31" class="SubMenu1">爵林腰果酥</a></div>
-												<div><a href="index.php?action=product_detail&pid=11" class="SubMenu1">爵林核桃酥</a></div>
-												<div><a href="index.php?action=product_detail&pid=8" class="SubMenu1">爵林原味花生</a></div>
-												<div><a href="index.php?action=product_detail&pid=30" class="SubMenu1">爵林芝麻花生酥</a></div>
-												<div><a href="index.php?action=product_detail&pid=9" class="SubMenu1">爵林海苔杏仁脆片</a></div>
-												<div><a href="index.php?action=product_detail&pid=14" class="SubMenu1">爵林貢糖酥</a></div>
-												<div><a href="index.php?action=product_detail&pid=17" class="SubMenu1">爵林牛軋糖</a></div>
-												<div><a href="index.php?action=product_detail&pid=16" class="SubMenu1">爵林豬腳貢糖</a></div>
-												<div><a href="index.php?action=product_detail&pid=19" class="SubMenu1">爵林花生軟糖</a></div>
-												<div><a href="index.php?action=product_detail&pid=20" class="SubMenu1">爵林鳳梨酥</a></div>
-												<div><a href="index.php?action=product_detail&pid=18" class="SubMenu1">爵林薑糖</a></div>
-												<div><a href="index.php?action=product_detail&pid=35" class="SubMenu1">堅果飴</a></div>
-												<div><a href="index.php?action=product_detail&pid=36" class="SubMenu1">蔓越莓果乾</a></div>
-												<div><a href="index.php?action=product_detail&pid=34" class="SubMenu1">運費</a></div>
-						</div>
-	<br />
-		<div class="SubMenuxjd"><a href="index.php?action=order"><img src="images/xjd.gif" border="0"></a></div>
-	<div class="Tu"></div>
-</div>	        
-       
-         
-        <div class="Clear"></div>
-       
-    </div>
-
-        <div class="Footer">
-    <div class="link">
-    <ul class="space">
-    <li class="a1">
-   <!--  <img src="images/LINE.png" width="50" height="50" /> -->
-    <?php echo $this->Html->image('/webroot/web/images/LINE.png',array('width' => '50','height' => '50')); ?>
-    <span>0913322238</span>
-    </li>
-    <li class="a1">
-    <!-- <img src="images/Whatsapp.png" width="50" height="50" /> -->
-    <?php echo $this->Html->image('/webroot/web/images/Whatsapp.png',array('width' => '50','height' => '50')); ?>
-    <span>0913322238</span></li>
-    <li class="a1">
-    <!-- <img src="images/WeChat.png" width="50" height="50" /> -->
-    <?php echo $this->Html->image('/webroot/web/images/WeChat.png',array('width' => '50','height' => '50')); ?>
-    <span>AA0913322238</span></li>
-    <li>
-    <!-- <img src="images/app.png" width="100" height="100" /> -->
-    <?php echo $this->Html->image('/webroot/web/images/app.png',array('width' => '100','height' => '100')); ?>
-    </li>
-    </ul>
-    </div>
-    <div class="Clear"></div>
-
-    <div>
-    <p>地址：台北市士林區基河路104號.新士林市場對面&nbsp;&nbsp;手機：0913-322-238   電話：02-28832958</p>
-	<p class="bot">傳真：02-28839235&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2009 爵林花生糖 版權所有　Designed by：<a href="HTTP://www.ozchamp.com" target="_blank">元伸網頁設計</a></p></div>
-    </div>
