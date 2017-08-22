@@ -5,13 +5,10 @@ use Cake\Event\Event;
 
 class ProductController extends AdminController {
     
-      public function initialize()
-    {
-        $this->loadModel('Product');
-
-        parent::initialize();
-    }
-
+  public function initialize() {
+    $this->loadModel('Product');
+    parent::initialize();
+  }
 
   public function product() { 
     $data = $this->Product->find()->where(['status' => 1])->all()->toArray();

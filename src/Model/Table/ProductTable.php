@@ -9,7 +9,7 @@ class ProductTable extends Table
 
     public function initialize(array $config)
     {
-        $this->table('product');
+        $this->table('t_product');
     }
 }
 ?>

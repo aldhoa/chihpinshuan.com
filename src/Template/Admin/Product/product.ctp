@@ -10,7 +10,7 @@
   <!--top-Header-menu-->
   <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Danh Mục Quản Lý</a>
     <ul>
-      <li> <a href="carts.html"><i class="icon icon-shopping-cart"></i> <span>Đơn Hàng</span></a> </li>
+      <li> <a href="<?php echo $this->Url->build(["controller" => "order", "action" => "order"]); ?>"><i class="icon icon-shopping-cart"></i> <span>Đơn Hàng</span></a> </li>
       <li> <a href="watches.html"><i class="icon icon-time"></i> <span>Cripy Pork Jerky</span></a> </li>
     </ul>
   </div>
@@ -92,19 +92,20 @@
                     <td><?php echo $value['note']; ?></td>
                     <td><?php echo $value['price']; ?></td>
                     <td class="o-giua">
-                      <div class="widget-content"><a href="<?php echo $this->Url->build(["controller" => "product", "action" => "edit", "id"=>$value['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
+                      <div class="widget-content">
+                        <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "edit", "id"=>$value['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
 
-                      <div id="1" class="modal hide">
-                        <div class="modal-header">
-                        <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>
+                        <div id="1" class="modal hide">
+                          <div class="modal-header">
+                            <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>
+                          </div>
+
+                          <div class="modal-footer"> 
+                            <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Sửa" href="#">Sửa</a> <a data-dismiss="modal" class="btn tip-top" data-original-title="Hủy" href="#">Hủy</a> 
+                          </div>
                         </div>
 
-                        <div class="modal-footer"> 
-                        <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Sửa" href="#">Sửa</a> <a data-dismiss="modal" class="btn tip-top" data-original-title="Hủy" href="#">Hủy</a> 
-                        </div>
-                      </div>
-
-                      <a class="btn tip-top" type="submit" data-original-title="delete" href="<?php echo $this->Url->build(["controller" => "product", "action" => "delete", "id"=>$value['id']]); ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
+                        <a class="btn tip-top" type="submit" data-original-title="delete" href="<?php echo $this->Url->build(["controller" => "product", "action" => "delete", "id"=>$value['id']]); ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
 
                       </div>
                     </td>
