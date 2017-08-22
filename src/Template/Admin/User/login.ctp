@@ -65,8 +65,15 @@
 <!--close-top-Header-messaages--> 
 
 <div id="content">
+  
 
   <h2>Cripy Pork Jerky</h2>
+
+ <?php if(isset($login_error_msg)): ?>
+      <div class="form-group has-error">
+          <label style="word-break:break-all;" class="col-xs-12 col-sm-12 col-md-12 help-block"><?php echo $login_error_msg?></label>
+      </div>
+    <?php endif; ?>
 
   <form action="#" method="post" class="form-horizontal">
       <label><b>Username</b></label>

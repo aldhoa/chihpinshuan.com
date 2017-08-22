@@ -1,8 +1,7 @@
 /*#sliderFrame {position:relative;width:700px;margin: 0 auto 40px;}*/
         
 #slider {
-    /*width:1003px;height:476px;*/
-    width:1003px;height:320px;
+    width:1003px;height:476px;
     /* Make it the same size as your images */
     background:#fff url(loading.gif) no-repeat 50% 50%;
     position:relative;
