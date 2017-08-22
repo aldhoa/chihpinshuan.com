@@ -53,11 +53,12 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     //config admin
     Router::prefix('admin', function ($routes) {
-        $routes->connect('/product'     , ['controller' => 'Product', 'action' => 'product']);
+        $routes->connect('/login'               , ['controller' => 'User'   , 'action' => 'login']);
+        $routes->connect('/product'             , ['controller' => 'Product', 'action' => 'product']);
         $routes->connect('/product/add'         , ['controller' => 'Product', 'action' => 'add']);
         $routes->connect('/product/edit/:id'    , ['controller' => 'Product', 'action' => 'edit']);
         $routes->connect('/product/delete/:id'  , ['controller' => 'Product', 'action' => 'delete']);
-        $routes->connect('/login'       , ['controller' => 'User', 'action' => 'login']);
+        $routes->connect('/orders'              , ['controller' => 'Orders'  , 'action' => 'orders']);
     });
 
     //config web
