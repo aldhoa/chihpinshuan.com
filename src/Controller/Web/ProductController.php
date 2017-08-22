@@ -5,8 +5,7 @@ use App\Controller\AppController;
 
 class ProductController extends AppController
 {
-
-	  public function initialize()
+	public function initialize()
     {
         parent::initialize();
         $this->viewBuilder()->setLayout('web');
@@ -15,4 +14,22 @@ class ProductController extends AppController
    public function index(){
     
    }
+
+
+   public function media(){
+    
+   }
+
+   public function prodtype(){
+    
+   }
+
+   public function orderinfo(){
+    
+   }
+
+   public function contact(){
+    
+   }
+
 }
