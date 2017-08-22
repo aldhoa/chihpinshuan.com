@@ -10,15 +10,7 @@
 <!--top-Header-menu-->
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Danh Mục Quản Lý</a>
   <ul>
-    <li> <a href="carts.html"><i class="icon icon-shopping-cart"></i> <span>Đơn Hàng</span></a> </li>
-    <li> <a href="watches.html"><i class="icon icon-time"></i> <span>Đồng Hồ</span></a> </li>
-    <li> <a href="brands.html"><i class="icon icon-th-large"></i> <span>Thương Hiệu</span></a> </li>
-    <li><a href="pages.html"><i class="icon icon-th"></i> <span>Trang</span></a></li>
-    <li class="submenu"> <a href="#"><i class="icon icon-briefcase"></i> <span>Sale</span><span class="label">2</span></a>
-      <ul>
-        <li><a href="brands-sale.html">Thương Hiệu</a></li>
-        <li><a href="watches-sale.html">Đồng Hồ</a></li>
-      </ul>
+    <li> <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "product"]); ?>"><i class="icon icon-briefcase"></i> <span>Sản Phẩm</span></a> </li>
     </li>
   </ul>
 </div>
