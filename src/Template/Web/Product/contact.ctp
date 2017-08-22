@@ -5,7 +5,11 @@
 			 <input type="hidden" name="newsdt" value="2017-08-06 01:41:44" >
 			 <table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
                <tr>
-               	<td colspan="2" style="padding:0px 0px 10px 0px;"><iframe width="580" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.tw/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%9F%BA%E6%B2%B3%E8%B7%AF104%E8%99%9F&amp;hl=zh-TW&amp;ie=UTF8&amp;sll=23.63446,120.970459&amp;sspn=7.524104,14.39209&amp;brcurrent=3,0x3442ae741e185a49:0x8c8db93eb1d0d2b6,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;hnear=111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%9F%BA%E6%B2%B3%E8%B7%AF104%E8%99%9F&amp;t=m&amp;hq=&amp;z=14&amp;vpsrc=0&amp;iwloc=A&amp;ll=25.088069,121.523536&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com.tw/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%9F%BA%E6%B2%B3%E8%B7%AF104%E8%99%9F&amp;hl=zh-TW&amp;ie=UTF8&amp;sll=23.63446,120.970459&amp;sspn=7.524104,14.39209&amp;brcurrent=3,0x3442ae741e185a49:0x8c8db93eb1d0d2b6,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;hnear=111%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80%E5%9F%BA%E6%B2%B3%E8%B7%AF104%E8%99%9F&amp;t=m&amp;hq=&amp;z=14&amp;vpsrc=0&amp;iwloc=A&amp;ll=25.088069,121.523536&amp;source=embed" style="color:#0000FF;text-align:left">檢視較大的地圖</a></small></td>
+               	<td colspan="2" style="padding:0px 0px 10px 0px;"><iframe width="580" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5804.94289728793!2d106.66016229727289!3d10.786229490604532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed20e44d543%3A0x1b141b7fa6d03f4c!2zQ8O0bmcgdmnDqm4gTMOqIFRo4buLIFJpw6puZw!5e0!3m2!1svi!2sin!4v1503397551040"></iframe><br /><small>
+
+               	<a href="https://www.google.co.in/maps/place/C%C3%B4ng+vi%C3%AAn+L%C3%AA+Th%E1%BB%8B+Ri%C3%AAng/@10.7862295,106.6601623,16.43z/data=!4m5!3m4!1s0x31752ed20e44d543:0x1b141b7fa6d03f4c!8m2!3d10.7865388!4d106.6650998" style="color:#0000FF;text-align:left">檢視較大的地圖</a>
+
+               	</small></td>
                </tr>
 			   <tr>
 			     <td class="font_12"><div align="right">標　　題﹕</div></td>
