@@ -62,7 +62,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     //config web
 
-        $routes->connect('/', ['prefix' => 'web','controller' => 'Web', 'action' => 'index']);
+        $routes->connect('/', ['prefix' => 'web','controller' => 'Product', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.

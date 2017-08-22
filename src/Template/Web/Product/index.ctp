@@ -1,38 +1,6 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="author" content="元伸 | 網頁設計 | LILY | KENT " />
-<title>爵林花生糖</title>
-<meta http-equiv="description" content="花生糖, 貢糖,杏仁酥, 南瓜酥,芝麻花生,芝麻糖,牛軋糖,鳳梨酥,薑糖"/>
-<meta http-equiv="keywords" content="花生糖, 貢糖,杏仁酥, 南瓜酥,芝麻花生,芝麻糖,牛軋糖,鳳梨酥,薑糖"/>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<script src="include/jscode/jquery.js" type="text/javascript"></script>
-<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
-<!--<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />-->
-<script type="text/javascript" src="include/jscode/highslide/highslide.js"></script>
-<script type="text/javascript">
-	hs.graphicsDir = 'include/jscode/highslide/graphics/';
-	hs.wrapperClassName = 'wide-border';
-    $(document).ready(function(){
-        $('.menu1').click(function(){
-            alert(1);
-        })
-    })
-</script>
-<style>
-    .menu1 {
-    position: absolute;
-    top: 40px;
-    height: 60px;
-    width: 70px;
-    left: 370px;
-    position: absolute;
-    }
-</style>
-</head>
-
-<body>
+<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
+<?php echo $this->Html->script('/web/include/jscode/js-image-slider'); ?>
+<?php echo $this->Html->css('/web/css/slider'); ?>
 
 <div class="Wrapper">
 
@@ -45,13 +13,39 @@
                 <a href="javascript:window.external.AddFavorite('/','爵林花生糖')">加入最愛</a>
             </div>
         </div>
+       
+            <div id="sliderFrame">
+                <div id="slider">
+                <a href="#">
+              
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-1.jpg'); ?>
+                </a>
+                <a href="#">
+               
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-2.jpg'); ?>
+                </a>
+                <a href="#">
+              
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-3.jpg'); ?>
+                </a>
+                <a href="#">
+              
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-4.jpg'); ?>
+                </a>
+                <a href="#">
+               
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-5.jpg'); ?>
+                </a>
+             
+                </div>
+                <div id="htmlcaption1" style="display: none;">
+                Image Slider by: <a href="http://github.com/saumya04" target="_blank">github.com/saumya04</a>
+                </div>
+                <div id="htmlcaption2" style="display: none;">
+                <a href="http://www.w3schools.com/css/" target="_blank">CSS</a>&nbsp;&&nbsp;<a href="http://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a> Rocks.
+                </div>
+            </div>
 
-    	<div class="Banner" style="background:url(images/about-top.jpg) left bottom no-repeat ">
-        <div class="menu1"></div>
-   	  <script type="text/javascript">
-AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','1003','height','374','src','images/about','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','wmode','transparent','movie','images/about' ); //end AC code
-</script>
-    </div>
     <div class="Middle">
 <div class="Lefter">
      	  <!-- <div class="ContentTitle"></div> -->
@@ -140,5 +134,3 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
     <p>地址：台北市士林區基河路104號.新士林市場對面&nbsp;&nbsp;手機：0913-322-238   電話：02-28832958</p>
 	<p class="bot">傳真：02-28839235&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2009 爵林花生糖 版權所有　Designed by：<a href="HTTP://www.ozchamp.com" target="_blank">元伸網頁設計</a></p></div>
     </div>
-    </body>
-</html>
