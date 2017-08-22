@@ -1,40 +1,9 @@
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
 <?php echo $this->Html->script('/web/include/jscode/js-image-slider'); ?>
 <?php echo $this->Html->css('/web/css/slider'); ?>
-<style>
-    @import url(https://fonts.googleapis.com/css?family=Raleway);
-body {
-  margin: 0px;
-}
-nav {
-  margin-top: 40px;
-  padding: 24px;
-  text-align: center;
-  font-family: Raleway;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
+<?php echo $this->Html->css('/web/css/menu'); ?>
 
-#nav-3 {
-  background: #EEA200;
-}
-
-
-.link-3 {
-  transition: 0.4s;
-  color: #ffffff;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0 10px;
-}
-.link-3:hover {
-  background-color: #ffffff;
-  color: #EEA200;
-  padding: 24px 10px;
-}
-</style>
 <div class="Wrapper">
-
         <div class="header-top">
             <div class="top-cart">
                 <a href="index.php?action=order">購物車</a>
@@ -44,8 +13,6 @@ nav {
                 <a href="javascript:window.external.AddFavorite('/','爵林花生糖')">加入最愛</a>
             </div>
         </div>
-        
-
             <nav id="nav-3">
               <a class="link-3" href="#">Home</a>
               <a class="link-3" href="#">About</a>
@@ -57,33 +24,25 @@ nav {
                 <div id="slider">
                 <a href="#">
               
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-1.jpg'); ?>
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food01.jpg'); ?>
                 </a>
                 <a href="#">
                
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-2.jpg'); ?>
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food02.jpg'); ?>
                 </a>
                 <a href="#">
               
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-3.jpg'); ?>
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food03.jpg'); ?>
                 </a>
                 <a href="#">
               
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-4.jpg'); ?>
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food04.jpg'); ?>
                 </a>
                 <a href="#">
                
-                <?php echo $this->Html->image('/webroot/web/images/slider/banners/image-slider-5.jpg'); ?>
+                <?php echo $this->Html->image('/webroot/web/images/slider/banners/food05.jpg'); ?>
                 </a>
              
-                </div>
-
-                <div id="htmlcaption1" style="display: none;">
-                Image Slider by: <a href="http://github.com/saumya04" target="_blank">github.com/saumya04</a>
-                </div>
-
-                <div id="htmlcaption2" style="display: none;">
-                <a href="http://www.w3schools.com/css/" target="_blank">CSS</a>&nbsp;&&nbsp;<a href="http://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a> Rocks.
                 </div>
 
             </div>
@@ -132,7 +91,7 @@ nav {
       </div>       
 	    
 <div class="Righter">
-	<!-- <div class="ListTitle"></div> -->
+	<div class="ListTitle"></div>
 	<div class="List">
 									<div><a href="index.php?action=product_detail&pid=15" class="SubMenu1">爵林杏仁酥</a></div>
 												<div><a href="index.php?action=product_detail&pid=7" class="SubMenu1">爵林南瓜酥</a></div>
@@ -164,10 +123,23 @@ nav {
         <div class="Footer">
     <div class="link">
     <ul class="space">
-    <li class="a1"><img src="images/LINE.png" width="50" height="50" /><span>0913322238</span></li>
-    <li class="a1"><img src="images/Whatsapp.png" width="50" height="50" /><span>0913322238</span></li>
-    <li class="a1"><img src="images/WeChat.png" width="50" height="50" /><span>AA0913322238</span></li>
-    <li><img src="images/app.png" width="100" height="100" /></li>
+    <li class="a1">
+   <!--  <img src="images/LINE.png" width="50" height="50" /> -->
+    <?php echo $this->Html->image('/webroot/web/images/LINE.png',array('width' => '50','height' => '50')); ?>
+    <span>0913322238</span>
+    </li>
+    <li class="a1">
+    <!-- <img src="images/Whatsapp.png" width="50" height="50" /> -->
+    <?php echo $this->Html->image('/webroot/web/images/Whatsapp.png',array('width' => '50','height' => '50')); ?>
+    <span>0913322238</span></li>
+    <li class="a1">
+    <!-- <img src="images/WeChat.png" width="50" height="50" /> -->
+    <?php echo $this->Html->image('/webroot/web/images/WeChat.png',array('width' => '50','height' => '50')); ?>
+    <span>AA0913322238</span></li>
+    <li>
+    <!-- <img src="images/app.png" width="100" height="100" /> -->
+    <?php echo $this->Html->image('/webroot/web/images/app.png',array('width' => '100','height' => '100')); ?>
+    </li>
     </ul>
     </div>
     <div class="Clear"></div>
