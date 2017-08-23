@@ -32,4 +32,20 @@ class ProductController extends AppController
     
    }
 
+   public function productDetail() {
+
+   }
+
+   public function order() {
+
+   }
+
+   public function orderAddress(){
+
+   }
+
+   public function orderSuccess(){
+    
+   }
+
 }

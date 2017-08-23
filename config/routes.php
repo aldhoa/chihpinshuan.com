@@ -68,6 +68,14 @@ Router::scope('/', function (RouteBuilder $routes) {
         $routes->connect('/prodtype',   ['prefix' => 'web','controller' => 'Product', 'action' => 'prodtype']);
         $routes->connect('/orderinfo',  ['prefix' => 'web','controller' => 'Product', 'action' => 'orderinfo']);
         $routes->connect('/contact',    ['prefix' => 'web','controller' => 'Product', 'action' => 'contact']);
+        $routes->connect('/product_detail/:id',    ['prefix' => 'web','controller' => 'Product', 'action' => 'product_detail']);
+
+        $routes->connect('/order/:product_id/type/:type',  ['prefix' => 'web','controller' => 'Product', 'action' => 'order']);
+
+        $routes->connect('/order_address',    ['prefix' => 'web','controller' => 'Product', 'action' => 'orderAddress']);
+
+        $routes->connect('/order_success',    ['prefix' => 'web','controller' => 'Product', 'action' => 'orderSuccess']);
+
 
     /**
      * Connect catchall routes for all controllers.
