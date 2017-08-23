@@ -11,16 +11,15 @@
   <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Danh Mục Quản Lý</a>
     <ul>
       <li> <a href="<?php echo $this->Url->build(["controller" => "orders", "action" => "orders"]); ?>"><i class="icon icon-shopping-cart"></i> <span>Đơn Hàng</span></a> </li>
+    </li>
+  </ul>
+</div>
+<div id="search">
+  <input type="text" placeholder="Search here..."/>
+  <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
+</div>
+<!--close-top-Header-menu-->
 
-      <div id="search">
-        <input type="text" placeholder="Search here..."/>
-        <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
-      </div>
-    </ul>
-    
-  </div>
-
-  
   <!--close-top-Header-menu-->
   <div id="content">
     <div id="content-header">

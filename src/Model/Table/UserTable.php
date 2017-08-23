@@ -9,7 +9,7 @@ class UserTable extends Table
 
     public function initialize(array $config)
     {
-        $this->table('t_user');
+        $this->table('user');
     }
 }
 ?>
