@@ -30,10 +30,11 @@ class OrdersController extends AdminController {
     }
   }
 
-  public function edit () {
+  public function orderDetail () {
+    echo 1;die;
     $id = $this->request->params['id'];
-    $productTable = TableRegistry::get('Product');
-    $product = $productTable->get($id)->toArray();
+    $ordersTable = TableRegistry::get('Orders');
+    $orderDetail = $orderDetail->get($id)->toArray();
 
     if ($this->request->is('post')) {
       $product = $productTable->newEntity();
@@ -43,12 +44,12 @@ class OrdersController extends AdminController {
       $product->note = $data['note'];
       $product->price = $data['price'];
 
-      if ($productTable->save($product)) {
-        $id = $product->id;
-        $this->redirect(['action' => 'product']);
+      if ($productTable->save($orderDetail)) {
+        $id = $orderDetail->id;
+        $this->redirect(['action' => 'orders']);
       }
     }
-    $this->set('value', $product);
+    $this->set('value', $orderDetail);
   }
 
   public function delete () {
