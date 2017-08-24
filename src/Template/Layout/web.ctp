@@ -16,7 +16,6 @@
 </head>
 <body>
 <div class="Wrapper">
-
   <!-- Header -->
   <?= $this->element('common/header') ?>
 

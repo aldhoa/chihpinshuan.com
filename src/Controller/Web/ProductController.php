@@ -12,6 +12,8 @@ class ProductController extends AppController
         $this->loadModel('Orders');
         $this->loadModel('User');
         $this->viewBuilder()->setLayout('web');
+
+     
     }
 
    public function index(){
@@ -24,7 +26,7 @@ class ProductController extends AppController
    }
 
    public function prodtype(){
-    $products[] = $this->Product->find()->all()->toArray();
+    $products = $this->Product->find()->where(['status' => 1])->all()->toArray();
     $this->set(compact('products'));
    }
 

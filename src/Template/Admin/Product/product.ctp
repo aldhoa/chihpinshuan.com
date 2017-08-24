@@ -60,10 +60,10 @@
               </thead>
                 <tbody class="btn-icon-pg my-btn-icon-pg dong-ho">
                 <?php foreach ($data as $product) { 
-                    $linkImg1 = 'uploads'.DS.$product['image_1'];
-                    $linkImg2 = 'uploads'.DS.$product['image_2'];
-                    $linkImg3 = 'uploads'.DS.$product['image_3'];
-                    $linkImg4 = 'uploads'.DS.$product['image_4'];
+                    $linkImg1 = '/img/uploads/'.$product['image_1'];
+                    $linkImg2 = '/img/uploads/'.$product['image_2'];
+                    $linkImg3 = '/img/uploads/'.$product['image_3'];
+                    $linkImg4 = '/img/uploads/'.$product['image_4'];
                   ?>
                   <tr>
                     <td><?php echo $product['id']; ?></td>
