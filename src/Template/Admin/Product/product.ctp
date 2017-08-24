@@ -27,40 +27,6 @@
       <h1>Cripy Pork Jerky</h1>
       <div class="widget-content">
       <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "add"]); ?>" data-toggle="modal"> <button class="btn tip-top btn-icon-pg my-plus-btn-icon-pg" data-original-title="add" ><ul><li><i class="icon-plus"></i>Thêm Sản Phẩm </li></ul></button> </a>
-        <div id="them-dong-ho" class="modal hide">
-
-          <div class="modal-header">
-            <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>
-            <h3>Thêm Món</h3>
-          </div>
-
-          <div class="modal-body">
-            <form action="#" method="get" class="form-horizontal">
-
-              <div class="control-group">
-              <label class="control-label">Tên :</label>
-              <div class="controls"><input class="span3" type="text" placeholder="Tên" /></div>
-              </div>
-
-              <div class="control-group">
-                <label class="control-label">Chọn Hình Ảnh Mới :</label>
-                <div class="controls"> <input type="file" /> </div>
-              </div>
-
-              <div class="control-group">
-                <label class="control-label">Thông Tin Sản Phẩm :</label>
-                <div class="controls"> <textarea class="span3" placeholder="Thông Tin Sản Phẩm" ></textarea> </div>
-              </div>
-
-            </form>
-          </div>
-
-          <div class="modal-footer"> 
-            <a data-dismiss="modal" class="btn btn-primary tip-top" data-original-title="Thêm" href="#">Thêm</a>
-            <a data-dismiss="modal" class="btn tip-top" data-original-title="delete" href="#">Hủy</a> 
-          </div>
-
-        </div>
       </div>
     </div>
     <div class="container-fluid">
@@ -77,7 +43,10 @@
                 <tr>
                   <th>#</th>
                   <th>Tên</th>
-                  <th>Hình Ảnh</th>
+                  <th>Hình Ảnh 1</th>
+                  <th>Hình Ảnh 2</th>
+                  <th>Hình Ảnh 3</th>
+                  <th>Hình Ảnh 4</th>
                   <th>Thông Tin Sản Phẩm</th>
                   <th>Giá</th>
                   <th>Sửa&frasl; Xóa Hoặc Khôi Phục</th>
@@ -85,16 +54,24 @@
                 </tr>
               </thead>
                 <tbody class="btn-icon-pg my-btn-icon-pg dong-ho">
-                <?php foreach ($data as $key => $value) { ?>
+                <?php foreach ($data as $product) { 
+                    $linkImg1 = 'uploads'.DS.$product['image_1'];
+                    $linkImg2 = 'uploads'.DS.$product['image_2'];
+                    $linkImg3 = 'uploads'.DS.$product['image_3'];
+                    $linkImg4 = 'uploads'.DS.$product['image_4'];
+                  ?>
                   <tr>
-                    <td><?php echo $value['id']; ?></td>
-                    <td><?php echo $value['name']; ?></td>
-                    <td><?php echo $this->Html->image($value['image_1']); ?></td>
-                    <td><?php echo $value['note']; ?></td>
-                    <td><?php echo $value['price']; ?></td>
+                    <td><?php echo $product['id']; ?></td>
+                    <td><?php echo $product['name']; ?></td>
+                    <td><?php echo $this->Html->image($linkImg1); ?></td>
+                    <td><?php echo $this->Html->image($linkImg2); ?></td>
+                    <td><?php echo $this->Html->image($linkImg3); ?></td>
+                    <td><?php echo $this->Html->image($linkImg4); ?></td>
+                    <td><?php echo $product['note']; ?></td>
+                    <td><?php echo $product['price']; ?></td>
                     <td class="o-giua">
                       <div class="widget-content">
-                        <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "edit", "id"=>$value['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
+                        <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "edit", "id"=>$product['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Sửa"><ul><li><i class="icon-pencil"></i></li></ul></button> </a>
 
                         <div id="1" class="modal hide">
                           <div class="modal-header">
@@ -106,7 +83,7 @@
                           </div>
                         </div>
 
-                        <a class="btn tip-top" type="submit" data-original-title="delete" href="<?php echo $this->Url->build(["controller" => "product", "action" => "delete", "id"=>$value['id']]); ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
+                        <a class="btn tip-top" type="submit" data-original-title="delete" href="<?php echo $this->Url->build(["controller" => "product", "action" => "delete", "id"=>$product['id']]); ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
 
                       </div>
                     </td>

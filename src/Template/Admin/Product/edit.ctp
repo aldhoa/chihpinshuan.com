@@ -51,7 +51,7 @@
 
     <div class="form-group">
       <label for="image">Hình :</label>
-        <input type="file" class="form-control" id="image" placeholder="image" name="image">
+        <input type="file" class="form-control" id="image" placeholder="image" name="image[]" multiple>
     </div>
 
     <button type="submit" class="btn btn-default">Lưu Thay Đổi</button>
