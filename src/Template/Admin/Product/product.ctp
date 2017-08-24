@@ -1,3 +1,8 @@
+<style>
+  .btn-icon-pg tr td img {
+    max-width: 150px !important;
+  }
+</style>
 <!--top-Header-messaages-->
 <div class="btn-group rightzero"> 
   <a class="top_message tip-left" title="Manage Files"><i class="icon-file"></i></a>
