@@ -20,13 +20,11 @@
 </div>
 <!--close-top-Header-menu-->
 
-
 </div>
 <div id="content">
   <div id="content-header">
     <div id="breadcrumb">  <a href="#" class="current">Đơn Hàng</a> </div>
     <h1>Đơn Hàng</h1>
-    
   </div>
    
   <div class="container-fluid">
@@ -88,16 +86,10 @@
                     <td class="o-giua"><ul><li><i class="icon-ok tip-top" data-original-title="Hiện Có"></i></li></ul></td>
                   </tr>
                 <?php } ?>
-
-
-
               </tbody>
             </table>
           </div>
         </div>
-        
-
-        
       </div>
     </div>
   </div>
