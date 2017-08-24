@@ -10,8 +10,8 @@
 <!--top-Header-menu-->
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Danh Mục Quản Lý</a>
   <ul>
-    <li> <a href="carts.html"><i class="icon icon-shopping-cart"></i> <span>Đơn Hàng</span></a> </li>
-    <li> <a href="watches.html"><i class="icon icon-time"></i> <span>Cripy Pork Jerky</span></a> </li>
+    <li> <a href="<?php echo $this->Url->build(["controller" => "orders", "action" => "orders"]); ?>"><i class="icon icon-shopping-cart"></i> <span>Đơn Hàng</span></a> </li>
+    <li> <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "product"]); ?>"><i class="icon icon-briefcase"></i> <span>Sản Phẩm</span></a> </li>
   </ul>
 </div>
 <div id="search">
@@ -44,7 +44,7 @@
       <input type="price" class="form-control" id="price" placeholder="Enter price" name="price">
     </div>
 
-    <div class="form-group">
+    <div class="form-group" enctype="multipart/form-data">
       <label for="image">Hình :</label>
         <input type="file" class="form-control" id="image" placeholder="image" name="image[]" multiple>
     </div>
