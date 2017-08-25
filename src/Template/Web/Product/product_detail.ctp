@@ -1,8 +1,13 @@
+<?php 
+  if(!empty($product_detail[0])){
+   $product = $product_detail[0];
+  }
+?>
 <div class="Lefter">
-       	  <!-- <div class="ContentTitle"></div> -->
-       	  	<div class="List">
-				<div class="SubMenu">爵林杏仁酥</div>
-			</div>
+          <!-- <div class="ContentTitle"></div> -->
+            <div class="List">
+        <div class="SubMenu"><?php echo $product['name'] ?></div>
+      </div>
             <div class="Pr000">
               <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tbody><tr>
@@ -11,16 +16,37 @@
                       <td><table width="314" border="0" cellspacing="0" cellpadding="0">
                         <tbody><tr>
                           <td height="210" align="center" valign="top"><!--style="background:url(images/pr00.jpg) no-repeat left top; padding-top:7px;"-->
-                          <div id="big_img"><a href="upload/2010/01/20100123034559.jpg" onclick="return hs.expand(this)"><img src="upload/2010/01/20100123034559.jpg" width="300" alt="爵林杏仁酥" height="225"></a></div></td>
+                          <div id="big_img"><a href="upload/2010/01/20100123034559.jpg" onclick="return hs.expand(this)">
+
+                          <?php echo $this->Html->image('uploads/'.$product['image_1'],['width' => '300','height' => '255','alt' => $product['name']]) ?>
+                          </a></div></td>
                         </tr>
                       </tbody></table></td>
                     </tr>
                     <tr>
                       <td valign="top"><table width="100%" border="0" cellspacing="2" cellpadding="3">
                         <tbody><tr>
-                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2016/02/201602141552560.jpg" class=" "><img src="upload/2016/02/201602141552560_small.jpg" width="91" height="68" border="0"></a></td>
-                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2016/02/20160214155256.jpg" class=" "><img src="upload/2016/02/20160214155256_small.jpg" width="91" height="68" border="0"></a></td>
-                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2014/07/20140702171237.jpg" class=" "><img src="upload/2014/07/20140702171237_small.jpg" width="91" height="68" border="0"></a></td>
+                          <td align="center" width="33.3%">
+
+                          <a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2016/02/201602141552560.jpg" class=" ">
+                     
+
+                        <?php echo $this->Html->image('uploads/'.$product['image_2'],['width' => '68','height' => '91','border' => 0]) ?>
+
+                          </a>
+                          </td>
+                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2016/02/20160214155256.jpg" class=" ">
+                        
+
+                          <?php echo $this->Html->image('uploads/'.$product['image_3'],['width' => '68','height' => '91','border' => 0]) ?>
+
+                          </a></td>
+                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2014/07/20140702171237.jpg" class=" ">
+                        
+
+                          <?php echo $this->Html->image('uploads/'.$product['image_4'],['width' => '68','height' => '91','border' => 0]) ?>
+
+                          </a></td>
                         </tr>
                       </tbody></table>
                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -44,11 +70,7 @@
                     </tr>
                   </tbody></table></td>
                   <td width="55%" valign="top" style="padding-left:15px; line-height:25px">
-                  <strong>嚴選美國加州杏仁果，結合微糖不負擔的海藻糖，<br>
-黃金比例的搭配，以數十年精緻手藝呈現，打造<br>
-出甜而不膩的動人口感！是本店超人氣商品！<br>
-<br>
-保存方法：請放置於陰涼處，避免陽光直接照射。<br>
+                  <strong><?php echo $product['note'] ?><br>
 <font color="#000000"><font face="新細明體"><strong>保存期間：二<span lang="EN-US">個月。</span></strong></font></font></strong>                  
                   </td>
                 </tr>

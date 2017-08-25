@@ -11,7 +11,7 @@
 
 <?php
   echo $this->Html->css(['/web/css/slider','/web/css/menu','/web/css/style','http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500']);
-  echo $this->Html->script(['/web/include/jscode/jquery','/web/include/jscode/js-image-slider']);
+  echo $this->Html->script(['/web/include/jscode/jquery','/web/include/jscode/js-image-slider','/web/include/jscode/highslide/highslide']);
 ?>
 </head>
 <body>

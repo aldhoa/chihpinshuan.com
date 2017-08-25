@@ -11,5 +11,10 @@ class ProductTable extends Table
     {
         $this->table('product');
     }
+
+    public function beforeFind($event, $query, $options)
+    {
+        $query->where(['status >' => 0]);
+    }
 }
 ?>

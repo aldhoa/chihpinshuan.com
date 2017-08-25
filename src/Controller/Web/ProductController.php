@@ -26,7 +26,7 @@ class ProductController extends AppController
    }
 
    public function prodtype(){
-    $products = $this->Product->find()->where(['status' => 1])->all()->toArray();
+    $products = $this->Product->find()->all()->toArray();
     $this->set(compact('products'));
    }
 
@@ -39,7 +39,13 @@ class ProductController extends AppController
    }
 
    public function productDetail() {
-
+    $product_detail = '';
+    $id = isset($this->request->params['id']) ? $this->request->params['id']  :'';
+    if(!empty($id)){
+      $product_detail = $this->Product->findById($id)->toArray();
+    }
+   
+    $this->set(compact('product_detail'));
    }
 
    public function order() {
