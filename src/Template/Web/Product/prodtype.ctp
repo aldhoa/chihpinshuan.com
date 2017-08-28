@@ -25,7 +25,7 @@
                           <td valign="top" style="padding-top:8px"><table width="38%" border="0" cellspacing="1" cellpadding="1">
                             <tr>
                               <td>
-                              <a href="index.php?action=product_detail&pid=31">
+                              <a href="'.$this->Url->build(["controller" => "product", "action" => "product_detail", "id"=>$product['id']]).'">
                               '.$this->Html->image('uploads/'.$product['image_1'],['width' => '208','height' => '155','border' => 0]).'
                               </a>
                               </td>

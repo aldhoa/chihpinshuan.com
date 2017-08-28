@@ -1,6 +1,6 @@
 <div class="Righter">
 
-  <div class="ListTitle"></div>
+  <!-- <div class="ListTitle"></div> -->
   <div class="List">
      
         <?php 
