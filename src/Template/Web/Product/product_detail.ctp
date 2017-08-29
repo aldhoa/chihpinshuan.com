@@ -63,7 +63,7 @@
                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody><tr>
                           <td width="100%" colspan="3" style="padding-top:5px">
-                            <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "order", "id"=>$product['id']]); ?>" class="go-cart" title="馬上訂購"></a>
+                            <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "addProductIntoCart", "id"=>$product['id']]); ?>" class="go-cart" title="馬上訂購"></a>
                           </td>
                         </tr>
                       </tbody></table></td>

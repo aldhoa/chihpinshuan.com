@@ -5,6 +5,7 @@ use App\Controller\AppController;
 
 class ProductController extends AppController
 {
+  protected $_session;
 	public function initialize()
     {
         parent::initialize();
@@ -12,6 +13,7 @@ class ProductController extends AppController
         $this->loadModel('Orders');
         $this->loadModel('User');
         $this->viewBuilder()->setLayout('web');
+        $this->_session = $this->request->session();
 
      
     }
@@ -48,13 +50,12 @@ class ProductController extends AppController
     $this->set(compact('product_detail'));
    }
 
-   public function order() {
+   public function addProductIntoCart() {
     $product_id = isset($this->request->params['id']) ? $this->request->params['id'] : '';
     if(!empty($product_id)){
       $productInfo = $this->Product->findById($product_id)->toArray();
     }
-    $session = $this->request->session();
-    $cart = $session->read('item');
+    $cart = $this->_session->read('item');
         if(empty($cart) && $productInfo){
             $cart['quantity'][$product_id]  = 1;
         }else{
@@ -65,11 +66,25 @@ class ProductController extends AppController
             }
         }
         $session->write('item', $cart); //lưu mảng cart vào sesion item nè
-        
-        $listProductInCart = $this->Product->getListProductInCart($session->read('item'));
-        
-        $this->set('productInCart',$session->read('item'));
-        $this->set('listProductInCart',$listProductInCart);
+        $this->redirect('/order');
+   }
+
+   public function order() {
+    $item = $this->_session->read('item');
+    $listProductInCart = $this->Product->getListProductInCart($item);
+    $this->set('productInCart',$item);
+    $this->set('listProductInCart',$listProductInCart);
+    if($this->request->is('post')){
+      if($this->request->data['cart_delete']){
+
+        $cart_delete = array_flip($this->request->data['cart_delete']);
+
+        echo '<pre>';
+        print_r($cart_delete);
+        echo '</pre>';
+      
+      }
+    }
    }
 
    public function orderAddress(){
