@@ -37,12 +37,21 @@
                 <tr>
                   <td colspan="6" align="left" bgcolor="#FEF4D0"><table width="100%" border="0" cellspacing="0" cellpadding="4">
                     <tbody><tr>
-                      <td width="9%"><input type="image" src="images/gx.jpg" name="submit"></td>
                       <td width="9%">
-                      <a href="index.php?action=prodtype"><img src="images/js.jpg" border="0" width="58" height="19"></a>                      </td>
+      
+                      <?php echo $this->Html->image('/webroot/web/images/gx.jpg',["name" => 'submit']); ?>
+                      </td>
+                      <td width="9%">
+                      <a href="index.php?action=prodtype">
+
+                        
+                      <?php echo $this->Html->image('/webroot/web/images/js.jpg',['width' => '58','height' => '19','border' => 0]); ?>
+                      </td>
                       <td width="82%" align="right">
                              
-                      <a href="index.php?action=order_address"><img src="images/enter.jpg" border="0" width="67" height="20"></a>
+                      <a href="index.php?action=order_address">
+                        <?php echo $this->Html->image('/webroot/web/images/enter.jpg',['width' => '67','height' => '20','border' => 0]); ?>
+                      </a>
                                             </td>
                     </tr>
                   </tbody></table></td>
