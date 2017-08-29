@@ -7,9 +7,6 @@
           if(!empty($products)) {
 
             foreach ($products as $product) {
-            //    echo '<pre>';
-            // print_r($name);
-            // echo '</pre>';
           ?>
           <div>
           <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "product_detail",'id' => $product['id']]); ?>" class="SubMenu1"><?php echo $product['name'] ?></a>

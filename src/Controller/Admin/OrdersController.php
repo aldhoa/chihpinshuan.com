@@ -31,7 +31,6 @@ class OrdersController extends AdminController {
   }
 
   public function orderDetail () {
-    echo 1;die;
     $id = $this->request->params['id'];
     $ordersTable = TableRegistry::get('Orders');
     $orderDetail = $orderDetail->get($id)->toArray();
