@@ -16,5 +16,12 @@ class ProductTable extends Table
     {
         $query->where(['status >' => 0]);
     }
+
+    public function getListProductInCart($listID){
+    	$list_id = array_keys($listID['quantity']);
+    	$productList = $this->find()->select()->where(['id IN' => $list_id])->all();
+
+    	return $productList ? $productList->toArray() : [];
+    }
 }
 ?>

@@ -11,28 +11,54 @@
                   <td width="15%" align="center" bgcolor="#FEF4D0">數量</td>
                   <td width="15%" align="center" bgcolor="#FEF4D0">價格</td>
                 </tr>
-                                <tr>
+                <?php
+                  if(!empty($listProductInCart)) {
+                     $totalMoney = '';
+                     foreach ($listProductInCart as $product) {
+                      
+                   $totalMoney += $product['price'] *  $productInCart['quantity'][$product['id']];
+                   ?>
+                   <tr>
                   <td align="center" bgcolor="#FEF4D0">
-                    <input name="cart_delete[]" value="15-250-罐裝:重量420g淨重370g" type="checkbox">                  </td>
-                  <td align="center" bgcolor="#FEF4D0"><table width="5%" border="0" cellspacing="0" cellpadding="0">
-                    <tbody><tr>
-                      <td style="border:solid 1px #F7BD73">
-                                            <img src="http://www.juelin.tw/upload/2010/01/20100123034559_small3.jpg" width="90" height="73">
-                                            </td>
-                    </tr>
-                  </tbody></table></td>
-                  <td align="center" bgcolor="#FEF4D0"><font style="color:#000000; font-size:14px; font-weight:bold;">爵林杏仁酥</font></td>
-                  <td align="center" bgcolor="#FEF4D0"><font style="color:#000000; font-size:14px; font-weight:bold;">罐裝:重量420g淨重370g</font></td>
+                    <input name="cart_delete[]" value="15-250-罐裝:重量420g淨重370g" type="checkbox">
+                    </td>
                   <td align="center" bgcolor="#FEF4D0">
-                  <input name="cart_quantity[]" value="2" size="4" type="text">
-                  <input name="pid[]" value="15-250-罐裝:重量420g淨重370g" type="hidden">                  </td>
+                  <table width="5%" border="0" cellspacing="0" cellpadding="0">
+
+                  <tbody>
+                  <tr>
+                    <td style="border:solid 1px #F7BD73">
+                      <!-- <img src="http://www.juelin.tw/upload/2010/01/20100123034559_small3.jpg" width="90" height="73"> -->
+                      <?php echo $this->Html->image('uploads/'.$product['image_1'],['width' => '90','height' => '73']); ?>
+                    </td>
+                  </tr>
+                  </tbody>
+                  </table>
+                  </td>
+
                   <td align="center" bgcolor="#FEF4D0">
-                  	<span>500</span>                  </td>
+                  <font style="color:#000000; font-size:14px; font-weight:bold;"><?php echo !empty($product['name']) ? $product['name'] : ''; ?></font>
+                  </td>
+                  <td align="center" bgcolor="#FEF4D0">
+                  <font style="color:#000000; font-size:14px; font-weight:bold;">罐裝:重量420g淨重370g</font>
+                  </td>
+                  <td align="center" bgcolor="#FEF4D0">
+                  <input name="cart_quantity[]" value="<?php echo $productInCart['quantity'][$product['id']]; ?>" size="4" type="text">
+                  <input name="pid[]" value="15-250-罐裝:重量420g淨重370g" type="hidden"></td>
+                  <td align="center" bgcolor="#FEF4D0"><span><?php echo number_format($product['price'] *  $productInCart['quantity'][$product['id']])?></span></td>
                 </tr>
-                                <tr>
+                   <?php
+                  }
+                  }
+                  
+                ?>
+                
+
+
+                <tr>
                   <td align="right" bgcolor="#FEF4D0" colspan="6">總數量
-                    <input readonly="" type="text" size="7" name="total_price2" id="total_price2" style="width:45px" value="2" disabled="disabled">&nbsp;&nbsp;總金額
-                    <input readonly="" type="text" size="7" name="total_price" id="total_price" style="width:45px" value="500" disabled="disabled"></td>
+                    <input readonly="" type="text" size="7" name="total_price2" id="total_price2" style="width:45px" value="<?php echo array_sum($productInCart['quantity']); ?>" disabled="disabled">&nbsp;&nbsp;總金額
+                    <input readonly="" type="text" size="7" name="total_price" id="total_price" style="width:45px" value="<?php echo !empty($totalMoney) ? number_format($totalMoney) : '' ?>" disabled="disabled"></td>
                 </tr>     
                 <tr>
                   <td colspan="6" align="left" bgcolor="#FEF4D0"><table width="100%" border="0" cellspacing="0" cellpadding="4">

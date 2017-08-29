@@ -49,10 +49,31 @@ class ProductController extends AppController
    }
 
    public function order() {
-
+    $product_id = isset($this->request->params['id']) ? $this->request->params['id'] : '';
+    if(!empty($product_id)){
+      $productInfo = $this->Product->findById($product_id)->toArray();
+    }
+    $session = $this->request->session();
+    $cart = $session->read('item');
+        if(empty($cart) && $productInfo){
+            $cart['quantity'][$product_id]  = 1;
+        }else{
+            if(key_exists($product_id, $cart['quantity'])){
+                $cart['quantity'][$product_id]  +=1;
+            }else{
+                $cart['quantity'][$product_id]  = 1;
+            }
+        }
+        $session->write('item', $cart); //lưu mảng cart vào sesion item nè
+        
+        $listProductInCart = $this->Product->getListProductInCart($session->read('item'));
+        
+        $this->set('productInCart',$session->read('item'));
+        $this->set('listProductInCart',$listProductInCart);
    }
 
    public function orderAddress(){
+
 
    }
 
