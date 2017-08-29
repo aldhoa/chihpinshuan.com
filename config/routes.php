@@ -70,11 +70,11 @@ Router::scope('/', function (RouteBuilder $routes) {
         $routes->connect('/contact',    ['prefix' => 'web','controller' => 'Product', 'action' => 'contact']);
         $routes->connect('/product_detail/:id',    ['prefix' => 'web','controller' => 'Product', 'action' => 'product_detail']);
 
-        $routes->connect('/order/:id',  ['prefix' => 'web','controller' => 'Product', 'action' => 'order']);
+        $routes->connect('/order/:id',['prefix' => 'web','controller' => 'Product', 'action' => 'order']);
 
-        $routes->connect('/order_address',    ['prefix' => 'web','controller' => 'Product', 'action' => 'orderAddress']);
+        $routes->connect('/order_address',['prefix' => 'web','controller' => 'Product', 'action' => 'orderAddress']);
 
-        $routes->connect('/order_success',    ['prefix' => 'web','controller' => 'Product', 'action' => 'orderSuccess']);
+        $routes->connect('/order_success',['prefix' => 'web','controller' => 'Product', 'action' => 'orderSuccess']);
 
 
     /**

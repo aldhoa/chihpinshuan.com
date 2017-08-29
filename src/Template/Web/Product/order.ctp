@@ -42,14 +42,16 @@
                       <?php echo $this->Html->image('/webroot/web/images/gx.jpg',["name" => 'submit']); ?>
                       </td>
                       <td width="9%">
-                      <a href="index.php?action=prodtype">
+                      <a href="<?php echo $this->Url->build(["controller" => "Product", "action" => "prodtype"]); ?>">
 
                         
                       <?php echo $this->Html->image('/webroot/web/images/js.jpg',['width' => '58','height' => '19','border' => 0]); ?>
                       </td>
                       <td width="82%" align="right">
                              
-                      <a href="index.php?action=order_address">
+                      <a href="<?php echo $this->Url->build(["controller" => "Product", "action" => "OrderAddress"]); ?>">
+
+
                         <?php echo $this->Html->image('/webroot/web/images/enter.jpg',['width' => '67','height' => '20','border' => 0]); ?>
                       </a>
                                             </td>
