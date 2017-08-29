@@ -12,7 +12,7 @@
                   <td width="15%" align="center" bgcolor="#FEF4D0">價格</td>
                 </tr>
                 <?php
-                  if(!empty($listProductInCart)) {
+                  if(!empty($listProductInCart) && !empty($productInCart['quantity'])) {
                      $totalMoney = '';
                      foreach ($listProductInCart as $product) {
                       
@@ -52,7 +52,7 @@
                 <tr>
                   <td align="right" bgcolor="#FEF4D0" colspan="6">總數量
                     <input readonly="" type="text" size="7" name="total_price2" id="total_price2" style="width:45px" value="<?php echo array_sum($productInCart['quantity']); ?>" disabled="disabled">&nbsp;&nbsp;總金額
-                    <input readonly="" type="text" size="7" name="total_price" id="total_price" style="width:45px" value="<?php echo !empty($totalMoney) ? number_format($totalMoney) : '' ?>" disabled="disabled"></td>
+                    <input readonly="" type="text" size="7" name="total_price" id="total_price" style="width:45px" value="<?php echo !empty($totalMoney) ? number_format($totalMoney) : 0 ?>" disabled="disabled"></td>
                 </tr>     
                 <tr>
                   <td colspan="6" align="left" bgcolor="#FEF4D0"><table width="100%" border="0" cellspacing="0" cellpadding="4">
