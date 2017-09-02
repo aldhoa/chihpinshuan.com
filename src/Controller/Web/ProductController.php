@@ -13,6 +13,8 @@ class ProductController extends AppController
         $this->loadModel('Orders');
         $this->loadModel('User');
         $this->viewBuilder()->setLayout('web');
+        $products = $this->Product->find()->all()->toArray();
+    $this->set(compact('products'));
         $this->_session = $this->request->session();
     }
 
@@ -72,24 +74,31 @@ class ProductController extends AppController
     $listProductInCart = $this->Product->getListProductInCart($item);
     
     if($this->request->is('post')){
-      if($this->request->data['cart_delete']){
+      if(isset($this->request->data['cart_delete'])){
         foreach ($this->request->data['cart_delete'] as $id) {
           if(array_key_exists($id, $item['quantity'])){
            unset($item['quantity'][$id]);
           }
         }
         $this->_session->write('item',$item);
+      }else if(isset($this->request->data['cart_quantity']) && isset($this->request->data['product_id'])){
+        $list_item = array_combine($this->request->data['product_id'], $this->request->data['cart_quantity']);
+        $list_items['quantity'] = $list_item;
+          $this->_session->delete('item');
+          $this->_session->write('item', $list_items);
       }
       $item = $this->_session->read('item');
     }
-    
+
     $this->set('productInCart',$item);
     $this->set('listProductInCart',$listProductInCart);
    }
 
    public function orderAddress(){
-
-
+    $item = $this->_session->read('item');
+    $listProductInCart = $this->Product->getListProductInCart($item);
+    $this->set('productInCart',$item);
+    $this->set('listProductInCart',$listProductInCart);
    }
 
    public function orderSuccess(){

@@ -42,7 +42,8 @@
                   <font style="color:#000000; font-size:14px; font-weight:bold;">罐裝:重量420g淨重370g</font>
                   </td>
                   <td align="center" bgcolor="#FEF4D0">
-                  <input name="cart_quantity[]" value="<?php echo $productInCart['quantity'][$product['id']]; ?>" size="4" type="text">
+                  <input name="cart_quantity[]" id="<?php echo $product['id'] ?>"  value="<?php echo $productInCart['quantity'][$product['id']]; ?>" size="4" type="text">
+                  <input name="product_id[]" value="<?php echo $product['id'] ?>" type="hidden" />
                   <td align="center" bgcolor="#FEF4D0"><span><?php echo number_format($product['price'] *  $productInCart['quantity'][$product['id']])?></span></td>
                 </tr>
                    <?php
@@ -91,6 +92,6 @@
         $(document).ready(function(){
           $('#delete_item_cart').click(function(){
             $('#cartForm1').submit();
-          })
+          });
         });
       </script>
