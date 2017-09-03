@@ -15,26 +15,42 @@
                   <td width="15%" align="center" bgcolor="#FEF4D0">數量</td>
                   <td width="15%" align="center" bgcolor="#FEF4D0">價格</td>
                 </tr>
-                                <tr>
-                  <td align="center" bgcolor="#FEF4D0"><table width="5%" border="0" cellspacing="0" cellpadding="0">
-                    <tbody><tr>
-                      <td style="border:solid 1px #F7BD73">
-                                            <img src="http://www.juelin.tw/upload/2010/01/20100123034559_small3.jpg" width="90" height="73">
-                                            </td>
-                    </tr>
-                  </tbody></table></td>
-                  <td align="center" bgcolor="#FEF4D0"><font style="color:#000000; font-size:14px; font-weight:bold;">爵林杏仁酥</font></td>
-                  <td align="center" bgcolor="#FEF4D0"><font style="color:#000000; font-size:14px; font-weight:bold;">罐裝:重量420g淨重370g</font></td>
-                  <td align="center" bgcolor="#FEF4D0">2</td>
+                <?php
+                  if(!empty($listProductInCart) && !empty($productInCart['quantity'])) {
+                     $totalMoney = '';
+                     foreach ($listProductInCart as $product) {
+                   $totalMoney += $product['price'] *  $productInCart['quantity'][$product['id']];
+                   ?>
+                  <tr>
                   <td align="center" bgcolor="#FEF4D0">
-                    <span>500</span>                  </td>
+                  <table width="5%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+
+                    <tr>
+                      <td style="border:solid 1px #F7BD73">
+                      <?php echo $this->Html->image('uploads/'.$product['image_1'],['width' => '90','height' => '73']); ?>
+                      </td></tr>
+                  </tbody>
+                  </table>
+
+                  </td>
+                  <td align="center" bgcolor="#FEF4D0"><font style="color:#000000; font-size:14px; font-weight:bold;"><?php echo $product['name'] ?></font></td>
+                  <td align="center" bgcolor="#FEF4D0"><font style="color:#000000; font-size:14px; font-weight:bold;">罐裝:重量420g淨重370g</font></td>
+                  <td align="center" bgcolor="#FEF4D0"><?php echo $productInCart['quantity'][$product['id']] ?></td>
+                  <td align="center" bgcolor="#FEF4D0">
+                    <span><?php echo $product['price'] * $productInCart['quantity'][$product['id']]?></span></td>
                 </tr>
-                                <tr>
+                <?php }
+                    }
+                 ?>
+
+                  <tr>
                   <td align="right" bgcolor="#FEF4D0" colspan="6">
-                    總數量：2 
+                    總數量：<?php echo array_sum($productInCart['quantity']); ?>
                     &nbsp;&nbsp;
-                    <span class="notice"><strong>總金額：500</strong></span>
-                </td></tr>     
+                    <span class="notice"><strong>總金額：<?php echo $totalMoney; ?></strong></span>
+                </td></tr> 
+
               </tbody></table>
 
 
@@ -46,8 +62,8 @@
                   <td width="160px" align="right"><span class="redword">* </span><strong>付款方式</strong>：</td>
                   <td align="left">
                     <label for="pay1"><input name="pay" type="radio" id="pay1" value="貨到付款" checked="">貨到付款</label>
-                     <label for="paycount1"><input name="pay" type="radio" id="paycount1" value="信用卡">信用卡</label>
-                    <label for="paycount2"><input name="pay" type="radio" id="paycount2" value="銀聯卡">銀聯卡</label>
+                     <!-- <label for="paycount1"><input name="pay" type="radio" id="paycount1" value="信用卡">信用卡</label>
+                    <label for="paycount2"><input name="pay" type="radio" id="paycount2" value="銀聯卡">銀聯卡</label> -->
                   </td>
                 </tr>
                 <tr>
