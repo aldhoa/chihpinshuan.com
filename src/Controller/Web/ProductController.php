@@ -29,9 +29,8 @@ class ProductController extends AppController
    // }
 
    public function prodtype(){
-    $products = $this->Product->find()->all()->toArray();
-    $products_type = $this->ProductType->find('list')->toArray();
-    $this->set(compact('products','products_type'));
+    // $products = $this->Product->find()->all()->toArray();
+    // $this->set(compact('products'));
    }
 
    public function orderinfo(){
