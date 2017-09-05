@@ -4,15 +4,15 @@
     <li class="a1">
   
     <?php echo $this->Html->image('/webroot/web/images/LINE.png',array('width' => '50','height' => '50')); ?>
-    <span>0913322238</span>
+    <span>0987080448</span>
     </li>
     <li class="a1">
    
     <?php echo $this->Html->image('/webroot/web/images/Whatsapp.png',array('width' => '50','height' => '50')); ?>
-    <span>0913322238</span></li>
+    <span>0987080448</span></li>
     <li class="a1">
     <?php echo $this->Html->image('/webroot/web/images/WeChat.png',array('width' => '50','height' => '50')); ?>
-    <span>AA0913322238</span></li>
+    <span>AA0987080448</span></li>
     <li>
     <?php echo $this->Html->image('/webroot/web/images/app.png',array('width' => '100','height' => '100')); ?>
     </li>
@@ -21,8 +21,8 @@
     <div class="Clear"></div>
 
     <div>
-    <p>地址：台北市士林區基河路104號.新士林市場對面&nbsp;&nbsp;手機：0913-322-238   電話：02-28832958</p>
-  <p class="bot">傳真：02-28839235&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2009 爵林花生糖 版權所有　Designed by：<a href="HTTP://www.ozchamp.com" target="_blank">元伸網頁設計</a></p>
+    <p>地址：台灣台北市士林區基河路101號205號&nbsp;&nbsp;0987-080-448   電話：02-28832958</p>
+  <p class="bot">傳真：02-28839235&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2017 爵林花生糖 版權所有　Designed by：<a href="tuanphp.info" target="_blank">TuanPham</a></p>
   </div>
   
     </div>

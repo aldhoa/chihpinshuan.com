@@ -10,6 +10,7 @@ class ProductController extends AppController
     {
         parent::initialize();
         $this->loadModel('Product');
+        $this->loadModel('ProductType');
         $this->loadModel('Orders');
         $this->loadModel('User');
         $this->viewBuilder()->setLayout('web');
@@ -23,13 +24,14 @@ class ProductController extends AppController
    }
 
 
-   public function media(){
+   // public function media(){
     
-   }
+   // }
 
    public function prodtype(){
     $products = $this->Product->find()->all()->toArray();
-    $this->set(compact('products'));
+    $products_type = $this->ProductType->find('list')->toArray();
+    $this->set(compact('products','products_type'));
    }
 
    public function orderinfo(){

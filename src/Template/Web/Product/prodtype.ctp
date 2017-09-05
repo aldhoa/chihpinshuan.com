@@ -10,11 +10,17 @@
             <div class="Pr">
 
             <?php 
-              if(!empty($products)) {
-                $xhtml = '';
+              if(!empty($products) && !empty($products_type)) {
+                $xhtml = $type_table  = '';
+                foreach ($products_type as $id => $type) {
+                  $checked = $id == 1 ? 'checked' : '';
+                  $type_table .= '<tr>
+                            <td align="left">
+                            <input type="radio" name="product_type" value="'.$id.'" '.$checked.' >'.$type.'</td>
+                            </tr>';
+                }
                 foreach ($products as $key => $product) {
                  
-                   
                 $xhtml .= '<table class="product_table" width="221" border="0" cellspacing="0" cellpadding="0">                    
                     <tr>
                       <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -32,27 +38,21 @@
                             </tr>
                           </table></td>
                         </tr>
+
                         <tr>
-                          <td>
-                          <table width="100%" border="0" cellspacing="0" cellpadding="0" height="60">
-                          <tr>
-                            <td align="left"><input type="radio" name="price31" value="250-罐裝:重量420g淨重370g" checked>罐裝:重量420g淨重370g                             &nbsp;&nbsp;價格
-                              250</td>
-                            </tr>
-                          <tr>
-                            <td align="left"><input type="radio" name="price31" value="200-袋裝:重量250g">袋裝:重量250g                             &nbsp;&nbsp;價格
-                              200</td>
-                            </tr>
-                          <tr>
+                          <td><table width="100%" border="0" cellspacing="0" cellpadding="0" height="60">
+                            '.$type_table.'
                             <td align="left">&nbsp;</td>
                             </tr>
+
+
                         </table>
 
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                               <td width="44%" style="padding-top:5px">&nbsp;</td>
-                              <td width="36%" align="right"><a href="javascript:void(0);" class="Order">馬上訂購</a>&nbsp;</td>
-                              <td width="20%" valign="top"><a href="javascript:void(0);">'.$this->Html->image('/webroot/web/images/go.jpg',['width' => '26','height' => '27','border' => 0]).'</a></td>
+                              <td width="36%" align="right"><a href="'.$this->Url->build(["controller" => "product", "action" => "addProductIntoCart", "id"=>$product['id']]).'" class="Order">馬上訂購</a>&nbsp;</td>
+                              <td width="20%" valign="top"><a href="'.$this->Url->build(["controller" => "product", "action" => "addProductIntoCart", "id"=>$product['id']]).'">'.$this->Html->image('/webroot/web/images/go.jpg',['width' => '26','height' => '27','border' => 0]).'</a></td>
                             </tr>
                           </table></td>
                         </tr>

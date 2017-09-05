@@ -64,8 +64,8 @@ Router::scope('/', function (RouteBuilder $routes) {
     //config web
 
         $routes->connect('/',           ['prefix' => 'web','controller' => 'Product', 'action' => 'index']);
-        $routes->connect('/media',      ['prefix' => 'web','controller' => 'Product', 'action' => 'media']);
-        $routes->connect('/prodtype',   ['prefix' => 'web','controller' => 'Product', 'action' => 'prodtype']);
+        // $routes->connect('/media',      ['prefix' => 'web','controller' => 'Product', 'action' => 'media']);
+        $routes->connect('/product',   ['prefix' => 'web','controller' => 'Product', 'action' => 'prodtype']);
         $routes->connect('/orderinfo',  ['prefix' => 'web','controller' => 'Product', 'action' => 'orderinfo']);
         $routes->connect('/contact',    ['prefix' => 'web','controller' => 'Product', 'action' => 'contact']);
         $routes->connect('/product_detail/:id',    ['prefix' => 'web','controller' => 'Product', 'action' => 'product_detail']);
