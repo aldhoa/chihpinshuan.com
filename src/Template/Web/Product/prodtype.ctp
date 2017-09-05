@@ -11,15 +11,17 @@
 
             <?php 
               if(!empty($products) && !empty($products_type)) {
-                $xhtml = $type_table  = '';
-                foreach ($products_type as $id => $type) {
-                  $checked = $id == 1 ? 'checked' : '';
-                  $type_table .= '<tr>
-                            <td align="left">
-                            <input type="radio" name="product_type" value="'.$id.'" '.$checked.' >'.$type.'</td>
-                            </tr>';
-                }
+                $xhtml = '';
+                
                 foreach ($products as $key => $product) {
+                  $type_table  = '';
+                  foreach ($products_type as $id => $type) {
+                    $checked = $id == 1 ? 'checked' : '';
+                    $type_table .= '<tr>
+                              <td align="left">
+                              <input type="radio" name="product_type_'.$product['id'].'" value="'.$id.'" '.$checked.'>'.$type.'</td>
+                              </tr>';
+                  }
                  
                 $xhtml .= '<table class="product_table" width="221" border="0" cellspacing="0" cellpadding="0">                    
                     <tr>
