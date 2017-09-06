@@ -23,7 +23,9 @@
                               </tr>';
                   }
                  
-                $xhtml .= '<table class="product_table" width="221" border="0" cellspacing="0" cellpadding="0">                    
+                $xhtml .= '<form method="post" action="add_product" id="form_product_'.$product['id'].'"> 
+                <input type="hidden" name="id" value="'.$product['id'].'">
+                <table class="product_table" width="221" border="0" cellspacing="0" cellpadding="0">                    
                     <tr>
                       <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
@@ -40,9 +42,10 @@
                             </tr>
                           </table></td>
                         </tr>
-
+                        
                         <tr>
                           <td><table width="100%" border="0" cellspacing="0" cellpadding="0" height="60">
+
                             '.$type_table.'
                             <td align="left">&nbsp;</td>
                             </tr>
@@ -53,16 +56,19 @@
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                               <td width="44%" style="padding-top:5px">&nbsp;</td>
-                              <td width="36%" align="right"><a href="'.$this->Url->build(["controller" => "product", "action" => "addProductIntoCart", "id"=>$product['id']]).'" class="Order">馬上訂購</a>&nbsp;</td>
-                              <td width="20%" valign="top"><a href="'.$this->Url->build(["controller" => "product", "action" => "addProductIntoCart", "id"=>$product['id']]).'">'.$this->Html->image('/webroot/web/images/go.jpg',['width' => '26','height' => '27','border' => 0]).'</a></td>
+                              <td width="36%" align="right">
+                                <a href="javascript:void(0);" class="Order order_product" id="'.$product['id'].'">馬上訂購</a>&nbsp;
+                              </td>
+                              
+                              <td width="20%" valign="top">
+                                <a href="javascript:void(0);" id="'.$product['id'].'" class="Order order_product">'.$this->Html->image('/webroot/web/images/go.jpg',['width' => '26','height' => '27','border' => 0]).'</a>
+                              </td>
                             </tr>
                           </table></td>
                         </tr>
                       </table></td>
                     </tr>
-                  </table>';
-
-               
+                  </table></form>';
                 }
                 echo $xhtml;
                
@@ -76,3 +82,12 @@
               </table>
             </div>
         </div>
+
+        <script>
+          $(function() {
+            $('.order_product').click(function(){
+              var id = $(this).attr('id');
+              $('#form_product_'+id).submit();
+            });
+          });
+        </script>

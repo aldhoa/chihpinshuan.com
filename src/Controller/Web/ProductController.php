@@ -53,22 +53,30 @@ class ProductController extends AppController
    }
 
    public function addProductIntoCart() {
-    $product_id = isset($this->request->params['id']) ? $this->request->params['id'] : '';
-    if(!empty($product_id)){
-      $productInfo = $this->Product->findById($product_id)->toArray();
-    }
-    $cart = $this->_session->read('item');
-        if(empty($cart) && $productInfo){
-            $cart['quantity'][$product_id]  = 1;
-        }else{
-            if(key_exists($product_id, $cart['quantity'])){
-                $cart['quantity'][$product_id]  +=1;
-            }else{
-                $cart['quantity'][$product_id]  = 1;
-            }
-        }
-        $this->_session->write('item', $cart); //lưu mảng cart vào sesion item nè
-        $this->redirect('/order');
+    if($this->request->is('post')){
+      $product_id = isset($this->request->data['id']) ? $this->request->data['id'] : '';
+      $type = !empty($product_id) ? $this->request->data['product_type_'.$product_id] : '';
+
+      
+     
+      if(!empty($product_id)){
+        $productInfo = $this->Product->findById($product_id)->toArray();
+      }
+      $cart = $this->_session->read('item');
+
+          if(empty($cart) && $productInfo){
+              $cart['quantity'][$product_id]  = 1;
+          }else{
+              if(key_exists($product_id, $cart['quantity'])){
+                  $cart['quantity'][$product_id]  += 1;
+              }else{
+                  $cart['quantity'][$product_id]  = 1;
+              }
+          }
+          $this->_session->write('item', $cart); //lưu mảng cart vào sesion item nè
+          $this->redirect('/order');
+      }
+    
    }
 
    public function order() {

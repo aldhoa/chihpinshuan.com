@@ -76,7 +76,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
         $routes->connect('/order_success',['prefix' => 'web','controller' => 'Product', 'action' => 'orderSuccess']);
 
-        $routes->connect('/add_product/:id',['prefix' => 'web','controller' => 'Product', 'action' => 'addProductIntoCart']);
+        $routes->connect('/add_product',['prefix' => 'web','controller' => 'Product', 'action' => 'addProductIntoCart']);
 
 
 

@@ -22,7 +22,7 @@
 
     <div>
     <p>地址：台灣台北市士林區基河路101號205號&nbsp;&nbsp;0987-080-448   電話：02-28832958</p>
-  <p class="bot">傳真：02-28839235&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2017 爵林花生糖 版權所有　Designed by：<a href="tuanphp.info" target="_blank">TuanPham</a></p>
+  <p class="bot">傳真：02-28839235&nbsp;&nbsp;&nbsp;&nbsp;Copyright © 2017 爵林花生糖 版權所有　Designed by：<a href="http://tuanphp.info/" target="_blank">TuanPham</a></p>
   </div>
   
     </div>
