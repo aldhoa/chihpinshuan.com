@@ -230,7 +230,7 @@ return [
              */
             //'port' => 'non_standard_port_number',
             'username' => 'root',
-            'password' => 'Luuduchoa73389761',
+            'password' => 'root',
             'database' => 'cripy_pork_jerky',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
