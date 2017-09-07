@@ -14,7 +14,7 @@
   echo $this->Html->script(['/web/include/jscode/jquery','/web/include/jscode/js-image-slider','/web/include/jscode/highslide/highslide']);
 ?>
 </head>
-<body style="background-color: black">
+<body>
 <div class="Wrapper">
   <!-- Header -->
   <?= $this->element('common/header') ?>
