@@ -15,11 +15,20 @@
                     <tbody><tr>
                       <td><table width="314" border="0" cellspacing="0" cellpadding="0">
                         <tbody><tr>
-                          <td height="210" align="center" valign="top"><!--style="background:url(images/pr00.jpg) no-repeat left top; padding-top:7px;"-->
-                          <div id="big_img"><a href="upload/2010/01/20100123034559.jpg" onclick="return hs.expand(this)">
+                          <td height="210" align="center" valign="top">
+                          <!--style="background:url(images/pr00.jpg) no-repeat left top; padding-top:7px;"-->
+                          <div id="big_img">
 
-                          <?php echo $this->Html->image('uploads/'.$product['image_1'],['width' => '300','height' => '255','alt' => $product['name']]) ?>
-                          </a></div></td>
+                         <?php 
+                            echo $this->Html->link(
+                              $this->Html->image('uploads/'.$product['image_1'],['width' => '300','height' => '255','alt' => $product['name']]),
+                              '/webroot/img/uploads/'.$product['image_1'],
+                              ['escape' => false,'class' => 'show_full_img']
+                          );
+                         ?>
+
+
+                          </div></td>
                         </tr>
                       </tbody></table></td>
                     </tr>
@@ -28,25 +37,36 @@
                         <tbody><tr>
                           <td align="center" width="33.3%">
 
-                          <a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2016/02/201602141552560.jpg" class=" ">
-                     
+                          <?php 
+                            echo $this->Html->link(
+                              $this->Html->image('uploads/'.$product['image_2'],['width' => '68','height' => '91','alt' => $product['name']]),
+                              '/webroot/img/uploads/'.$product['image_2'],
+                              ['escape' => false,'class' => 'show_full_img']
+                          );
+                         ?>
 
-                        <?php echo $this->Html->image('uploads/'.$product['image_2'],['width' => '68','height' => '91','border' => 0]) ?>
-
-                          </a>
                           </td>
-                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2016/02/20160214155256.jpg" class=" ">
-                        
+                          <td align="center" width="33.3%">
 
-                          <?php echo $this->Html->image('uploads/'.$product['image_3'],['width' => '68','height' => '91','border' => 0]) ?>
+                          <?php 
+                            echo $this->Html->link(
+                              $this->Html->image('uploads/'.$product['image_3'],['width' => '68','height' => '91','alt' => $product['name']]),
+                              '/webroot/img/uploads/'.$product['image_3'],
+                              ['escape' => false,'class' => 'show_full_img']
+                          );
+                         ?>
+                          </td>
+                          <td align="center" width="33.3%">
 
-                          </a></td>
-                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2014/07/20140702171237.jpg" class=" ">
-                        
+                          <?php 
+                            echo $this->Html->link(
+                              $this->Html->image('uploads/'.$product['image_4'],['width' => '68','height' => '91','alt' => $product['name']]),
+                              '/webroot/img/uploads/'.$product['image_4'],
+                              ['escape' => false,'class' => 'show_full_img']
+                          );
+                         ?>
 
-                          <?php echo $this->Html->image('uploads/'.$product['image_4'],['width' => '68','height' => '91','border' => 0]) ?>
-
-                          </a></td>
+                          </td>
                         </tr>
                       </tbody></table>
                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -77,3 +97,11 @@
               </tbody></table>
           </div>
         </div>
+        <script>
+          $(function() {
+            $('.show_full_img').click(function(){
+              return hs.expand(this);
+            });
+            
+          });
+        </script>

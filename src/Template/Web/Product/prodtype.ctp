@@ -10,7 +10,7 @@
             <div class="Pr">
 
             <?php 
-              if(!empty($products) && !empty($products_type)) {
+              if(!empty($products)) {
                 $xhtml = '';
                 
                 foreach ($products as $key => $product) {

@@ -39,7 +39,7 @@ lang : {
 	restoreTitle : 'Click to close image, click and drag to move. Use arrow keys for next and previous.'
 },
 // See http://highslide.com/ref for examples of settings  
-graphicsDir : 'highslide/graphics/',
+graphicsDir : '../webroot/web/include/jscode/highslide/graphics/',
 expandCursor : 'zoomin.cur', // null disables
 restoreCursor : 'zoomout.cur', // null disables
 expandDuration : 250, // milliseconds
