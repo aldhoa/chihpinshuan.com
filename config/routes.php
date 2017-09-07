@@ -58,7 +58,8 @@ Router::scope('/', function (RouteBuilder $routes) {
         $routes->connect('/product/add'         , ['controller' => 'Product', 'action' => 'add']);
         $routes->connect('/product/edit/:id'    , ['controller' => 'Product', 'action' => 'edit']);
         $routes->connect('/product/delete/:id'  , ['controller' => 'Product', 'action' => 'delete']);
-        $routes->connect('/orders'              , ['controller' => 'Orders'  , 'action' => 'orders']);
+        $routes->connect('/orders'              , ['controller' => 'Orders' , 'action' => 'orders']);
+        $routes->connect('/orders/detail/:id'   , ['controller' => 'Orders' , 'action' => 'ordersDetail']);
     });
 
     //config web
