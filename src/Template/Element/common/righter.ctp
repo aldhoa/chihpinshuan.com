@@ -1,6 +1,6 @@
-<div class="Righter">
+<!-- <div class="Righter">
 
-  <!-- <div class="ListTitle"></div> -->
+  <div class="ListTitle"></div>
   <div class="List">
      
         <?php 
@@ -21,5 +21,5 @@
   <div class="SubMenuxjd"><a href="index.php?action=order"><img src="images/xjd.gif" border="0"></a></div>
   <div class="Tu"></div>
 
-</div>
+</div> -->
 <div class="Clear"></div>
