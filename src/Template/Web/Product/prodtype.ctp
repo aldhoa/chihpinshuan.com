@@ -23,7 +23,7 @@
                               </tr>';
                   }
                  
-                $xhtml .= '<table class="product_table" width="221" border="0" cellspacing="0" cellpadding="0">                    
+                $xhtml .= '<table class="product_table" width="235" border="0" cellspacing="0" cellpadding="0">                    
                     <tr>
                       <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
