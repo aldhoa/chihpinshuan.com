@@ -69,10 +69,10 @@
               }
             ?>
             <div style="clear:both;"></div>    
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Pages" align="center">
+              <!-- <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Pages" align="center">
                 <tr>
                   <td align="center"><a href="javascript:;" class="BtnFirst">首頁</a><a href="javascript:;" class="BtnPrev">上一頁</a><em class="BtnNumSelect">1</em><a href="?action=prodtype&p=2" class="BtnNum">2</a><a href="?action=prodtype&p=2" class="BtnNext">下一頁</a><a href="?action=prodtype&p=2" class="BtnEnd">尾頁</a></td>
                 </tr>
-              </table>
+              </table> -->
             </div>
         </div>
