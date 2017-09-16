@@ -70,14 +70,13 @@
                         </tr>
                       </tbody></table>
                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody><tr>
-                          <td align="left"><input type="radio" name="price" value="250-罐裝:重量420g淨重370g" checked="">罐裝:重量420g淨重370g&nbsp;&nbsp;價格250</td>
-                         </tr>
+                        <tbody>
                         <tr>
-                          <td align="left"><input type="radio" name="price" value="200-袋裝:重量250g">袋裝:重量250g&nbsp;&nbsp;價格200</td>
+                          <td align="left"><input type="radio" name="type_product" value="1" checked="">Đóng hộp</td>
                          </tr>
+                       
                         <tr>
-                          <td align="left"><input type="radio" name="price" value="750-三入禮盒組">三入禮盒組&nbsp;&nbsp;價格750</td>
+                          <td align="left"><input type="radio" name="type_product" value="2">Đóng gói</td>
                          </tr>
                       </tbody></table>
                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
