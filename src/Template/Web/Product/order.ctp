@@ -13,12 +13,11 @@
                 </tr>
                 <?php
                   if(!empty($listProductInCart) && !empty($productInCart['quantity'])) {
-                     $totalMoney = '';
+                     $totalMoney = $quantity = '';
                      foreach ($listProductInCart as $product) {
-                      
-                   $totalMoney += $product['price'] *  $productInCart['quantity'][$product['id']];
-                   ?>
-                   <tr>
+                      foreach ($productInCart['quantity'][$product['id']] as $key => $value) {
+                       ?> 
+                        <tr>
                   <td align="center" bgcolor="#FEF4D0">
                     <input name="cart_delete[]" value="<?php echo $product['id'] ?>" type="checkbox">
                     </td>
@@ -39,20 +38,34 @@
                   <font style="color:#000000; font-size:14px; font-weight:bold;"><?php echo !empty($product['name']) ? $product['name'] : ''; ?></font>
                   </td>
                   <td align="center" bgcolor="#FEF4D0">
-                  <font style="color:#000000; font-size:14px; font-weight:bold;">罐裝:重量420g淨重370g</font>
+                  <font style="color:#000000; font-size:14px; font-weight:bold;"><?php echo $key == 1 ? 'Đóng hộp' : 'Đóng gói' ?></font>
                   </td>
                   <td align="center" bgcolor="#FEF4D0">
-                  <input name="cart_quantity[]" id="<?php echo $product['id'] ?>"  value="<?php echo $productInCart['quantity'][$product['id']]; ?>" size="4" type="text">
+                  <input name="cart_quantity[]" id="<?php echo $product['id'] ?>"  value="<?php echo $productInCart['quantity'][$product['id']][$key]; ?>" size="4" type="text">
                   <input name="product_id[]" value="<?php echo $product['id'] ?>" type="hidden" />
-                  <td align="center" bgcolor="#FEF4D0"><span><?php echo number_format($product['price'] *  $productInCart['quantity'][$product['id']])?></span></td>
+
+                  <td align="center" bgcolor="#FEF4D0"><span>
+                  <?php echo number_format($product['price'] *  $productInCart['quantity'][$product['id']][$key])?>
+                    
+                  </span></td>
+
                 </tr>
+                        
+                    <?php 
+                    $totalMoney += $product['price'] *  $productInCart['quantity'][$product['id']][$key];
+                    $quantity += $productInCart['quantity'][$product['id']][$key];
+                  }
+                      
+                   
+                   ?>
+                   
                    <?php
                   }
                   }
                 ?>
                 <tr>
                   <td align="right" bgcolor="#FEF4D0" colspan="6">總數量
-                    <input readonly="" type="text" size="7" name="total_price2" id="total_price2" style="width:45px" value="<?php echo array_sum($productInCart['quantity']); ?>" disabled="disabled">&nbsp;&nbsp;總金額
+                    <input readonly="" type="text" size="7" name="total_price2" id="total_price2" style="width:45px" value="<?php echo $quantity ?>" disabled="disabled">&nbsp;&nbsp;總金額
                     <input readonly="" type="text" size="7" name="total_price" id="total_price" style="width:45px" value="<?php echo !empty($totalMoney) ? number_format($totalMoney) : 0 ?>" disabled="disabled"></td>
                 </tr>     
                 <tr>

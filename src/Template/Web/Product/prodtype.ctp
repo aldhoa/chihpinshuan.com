@@ -6,24 +6,29 @@
   }
 </style>
 <div class="Lefter">
-       	  <!-- <div class="ContentTitle"></div> -->
+          <!-- <div class="ContentTitle"></div> -->
             <div class="Pr">
 
             <?php 
               if(!empty($products)) {
-                $xhtml = '';
-                
+                $xhtml =  $type_table ='';
+               
                 foreach ($products as $key => $product) {
-                  $type_table  = '';
-                  foreach ($products_type as $id => $type) {
-                    $checked = $id == 1 ? 'checked' : '';
-                    $type_table .= '<tr>
+                  $type_table = '<tr>
                               <td align="left">
-                              <input type="radio" name="product_type_'.$product['id'].'" value="'.$id.'" '.$checked.'>'.$type.'</td>
+                              <input type="radio" name="type_product" value="1" checked>Đóng hộp</td>
+                              </tr>
+                              <tr>
+                              <td align="left">
+                              <input type="radio" name="type_product" value="2">Đóng gói</td>
                               </tr>';
-                  }
+                  
                  
-                $xhtml .= '<table class="product_table" width="235" border="0" cellspacing="0" cellpadding="0">                    
+                $xhtml .= $this->Form->create(null, [
+                        'url'   => '/add_product',
+                        'type'  => 'post',
+                        'id'    => 'addProduct' 
+                    ]).'<table class="product_table" width="235" border="0" cellspacing="0" cellpadding="0">                    
                     <tr>
                       <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
@@ -33,12 +38,13 @@
                           <td valign="top" style="padding-top:8px"><table width="38%" border="0" cellspacing="1" cellpadding="1">
                             <tr>
                               <td>
+                              <input type="hidden" name="product_id" value="'.$product['id'].'">
                               <a href="'.$this->Url->build(["controller" => "product", "action" => "product_detail", "id"=>$product['id']]).'">
                               '.$this->Html->image('uploads/'.$product['image_1'],['width' => '208','height' => '155','border' => 0]).'
                               </a>
                               </td>
                             </tr>
-                          </table></td>
+                          </table></form></td>
                         </tr>
 
                         <tr>
@@ -53,8 +59,8 @@
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                               <td width="44%" style="padding-top:5px">&nbsp;</td>
-                              <td width="36%" align="right"><a href="'.$this->Url->build(["controller" => "product", "action" => "addProductIntoCart", "id"=>$product['id']]).'" class="Order">馬上訂購</a>&nbsp;</td>
-                              <td width="20%" valign="top"><a href="'.$this->Url->build(["controller" => "product", "action" => "addProductIntoCart", "id"=>$product['id']]).'">'.$this->Html->image('/webroot/web/images/go.jpg',['width' => '26','height' => '27','border' => 0]).'</a></td>
+                              <td width="36%" align="right"><a class="Order add_product_to_cart">馬上訂購</a>&nbsp;</td>
+                              <td width="20%" valign="top"><a class="add_product_to_cart">'.$this->Html->image('/webroot/web/images/go.jpg',['width' => '26','height' => '27','border' => 0]).'</a></td>
                             </tr>
                           </table></td>
                         </tr>
@@ -76,3 +82,13 @@
               </table> -->
             </div>
         </div>
+        <script>
+          $(function() {
+           
+
+            $('.add_product_to_cart').click(function() {
+              $('#addProduct').submit();
+            })
+            
+          });
+        </script>

@@ -29,6 +29,7 @@ class ProductController extends AppController
    // }
 
    public function prodtype(){
+     // $this->_session->destroy();
     $products = $this->Product->find()->all()->toArray();
     $this->set(compact('products'));
    }
@@ -52,27 +53,48 @@ class ProductController extends AppController
    }
 
    public function addProductIntoCart() {
-    $product_id = isset($this->request->params['id']) ? $this->request->params['id'] : '';
+    if($this->request->is('post')){
+      $product_id = isset($this->request->data['product_id']) ? $this->request->data['product_id'] : '';
+      $type = isset($this->request->data['type_product']) ? $this->request->data['type_product'] : '';
+
     if(!empty($product_id)){
       $productInfo = $this->Product->findById($product_id)->toArray();
     }
-    $cart = $this->_session->read('item');
+        $cart = $this->_session->read('item');
+
+        // echo '<pre>';
+        // print_r($cart);
+        // echo '</pre>';
+        // die;
+      //    echo '<pre>';
+      // print_r($this->request->data);
+      // echo '</pre>';
+      // die;
+
         if(empty($cart) && $productInfo){
-            $cart['quantity'][$product_id]  = 1;
+            $cart['quantity'][$product_id][$type]  = 1;
         }else{
-            if(key_exists($product_id, $cart['quantity'])){
-                $cart['quantity'][$product_id]  +=1;
-            }else{
-                $cart['quantity'][$product_id]  = 1;
-            }
+          if(key_exists($product_id, $cart['quantity'])){
+              $cart['quantity'][$product_id][$type]  +=1;
+          }else{
+              $cart['quantity'][$product_id][$type]  = 1;
+          }
         }
-        $this->_session->write('item', $cart); //lưu mảng cart vào sesion item nè
-        $this->redirect('/order');
+      $this->_session->write('item', $cart); //lưu mảng cart vào sesion item nè
+      
+    }
+       $cart = $this->_session->read('item');
+
+      $this->redirect('/order');
    }
 
    public function order() {
     $item = $this->_session->read('item');
+
+
     $listProductInCart = $this->Product->getListProductInCart($item);
+
+
     
     if($this->request->is('post')){
       if(isset($this->request->data['cart_delete'])){
