@@ -21,7 +21,7 @@
 
                          <?php 
                             echo $this->Html->link(
-                              $this->Html->image('uploads/'.$product['image_1'],['width' => '300','height' => '255','alt' => $product['name']]),
+                              $this->Html->image('uploads/'.$product['image_1'],['width' => '600','height' => '510','alt' => $product['name']]),
                               '/webroot/img/uploads/'.$product['image_1'],
                               ['escape' => false,'class' => 'show_full_img']
                           );
@@ -39,7 +39,7 @@
 
                           <?php 
                             echo $this->Html->link(
-                              $this->Html->image('uploads/'.$product['image_2'],['width' => '68','height' => '91','alt' => $product['name']]),
+                              $this->Html->image('uploads/'.$product['image_2'],['width' => '134','height' => '182','alt' => $product['name']]),
                               '/webroot/img/uploads/'.$product['image_2'],
                               ['escape' => false,'class' => 'show_full_img']
                           );
@@ -50,7 +50,7 @@
 
                           <?php 
                             echo $this->Html->link(
-                              $this->Html->image('uploads/'.$product['image_3'],['width' => '68','height' => '91','alt' => $product['name']]),
+                              $this->Html->image('uploads/'.$product['image_3'],['width' => '134','height' => '182','alt' => $product['name']]),
                               '/webroot/img/uploads/'.$product['image_3'],
                               ['escape' => false,'class' => 'show_full_img']
                           );
@@ -60,7 +60,7 @@
 
                           <?php 
                             echo $this->Html->link(
-                              $this->Html->image('uploads/'.$product['image_4'],['width' => '68','height' => '91','alt' => $product['name']]),
+                              $this->Html->image('uploads/'.$product['image_4'],['width' => '134','height' => '182','alt' => $product['name']]),
                               '/webroot/img/uploads/'.$product['image_4'],
                               ['escape' => false,'class' => 'show_full_img']
                           );
