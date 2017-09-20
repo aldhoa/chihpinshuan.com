@@ -1,8 +1,7 @@
 <div class="Lefter">
      	  <!-- <div class="ContentTitle"></div> -->
       <div class="About">
-      		<form action="" method="post" name="msgform" onsubmit="return checkForm(this)">
-			 <input type="hidden" name="newsdt" value="2017-08-06 01:41:44" >
+      		<form action="" method="post" name="msgform" id="form_contact">
 			 <table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
                <tr>
                	<td colspan="2" style="padding:0px 0px 10px 0px;"><iframe width="580" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5804.94289728793!2d106.66016229727289!3d10.786229490604532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed20e44d543%3A0x1b141b7fa6d03f4c!2zQ8O0bmcgdmnDqm4gTMOqIFRo4buLIFJpw6puZw!5e0!3m2!1svi!2sin!4v1503397551040"></iframe><br /><small>
@@ -51,3 +50,33 @@
 			 </form>
       </div>
 </div>
+<script>
+	$(function(){
+		$('#button').click(function(e){
+			e.preventDefault();
+			if(!$('#title').val().trim()){
+				alert('Please enter title');
+			}else if(!$('#name').val().trim()){
+				alert('Please enter name');
+			}
+			else if(!$('#tel').val().trim()){
+				alert('Please enter phone number');
+			}
+			else if(!$('#email').val().trim()){
+				alert('Please enter email');
+			}
+			else if(!$('#name').val()){
+				alert('Please enter name');
+			}
+			else if(!$('#address').val()){
+				alert('Please enter address');
+			}
+			else if(!$('#content').val()){
+				alert('Please enter content');
+			}else{
+				$('#form_contact').submit();
+			}
+		});
+		
+	})
+</script>

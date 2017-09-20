@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller\Web;
 use App\Controller\AppController;
+use Cake\Mailer\Email;
 
 
 class ProductController extends AppController
@@ -15,7 +16,7 @@ class ProductController extends AppController
         $this->loadModel('User');
         $this->viewBuilder()->setLayout('web');
         $products = $this->Product->find()->all()->toArray();
-    $this->set(compact('products'));
+        $this->set(compact('products'));
         $this->_session = $this->request->session();
     }
 
@@ -41,7 +42,14 @@ class ProductController extends AppController
    }
 
    public function contact(){
-    
+    if($this->request->is('POST')){
+      $email = new Email('default');
+      $content = 'Phone number: '.$this->request->data['tel']."\r\n".'Email: '.$this->request->data['email']."\r\n".'Content: '.$this->request->data['content'];
+      $email->from([$this->request->data['email'] => 'Customer'])
+    ->to('pvtuanhcmus@gmail.com')
+    ->subject($this->request->data['title'])
+    ->send($content);
+    }
    }
 
    public function productDetail() {
@@ -56,31 +64,7 @@ class ProductController extends AppController
 
    public function addProductIntoCart() {
     if($this->request->is('post')){
-<<<<<<< HEAD
-      $product_id = isset($this->request->data['id']) ? $this->request->data['id'] : '';
-      $type = !empty($product_id) ? $this->request->data['product_type_'.$product_id] : '';
 
-      
-     
-      if(!empty($product_id)){
-        $productInfo = $this->Product->findById($product_id)->toArray();
-      }
-      $cart = $this->_session->read('item');
-
-          if(empty($cart) && $productInfo){
-              $cart['quantity'][$product_id]  = 1;
-          }else{
-              if(key_exists($product_id, $cart['quantity'])){
-                  $cart['quantity'][$product_id]  += 1;
-              }else{
-                  $cart['quantity'][$product_id]  = 1;
-              }
-          }
-          $this->_session->write('item', $cart); //lưu mảng cart vào sesion item nè
-          $this->redirect('/order');
-      }
-    
-=======
       $product_id = isset($this->request->data['product_id']) ? $this->request->data['product_id'] : '';
       $type = isset($this->request->data['type_product']) ? $this->request->data['type_product'] : '';
 
@@ -88,15 +72,6 @@ class ProductController extends AppController
       $productInfo = $this->Product->findById($product_id)->toArray();
     }
         $cart = $this->_session->read('item');
-
-        // echo '<pre>';
-        // print_r($cart);
-        // echo '</pre>';
-        // die;
-      //    echo '<pre>';
-      // print_r($this->request->data);
-      // echo '</pre>';
-      // die;
 
         if(empty($cart) && $productInfo){
             $cart['quantity'][$product_id][$type]  = 1;
@@ -113,7 +88,7 @@ class ProductController extends AppController
        $cart = $this->_session->read('item');
 
       $this->redirect('/order');
->>>>>>> a2f596730b084eebf3477c2d9ea36444ec77262d
+
    }
 
    public function order() {
