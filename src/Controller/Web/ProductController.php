@@ -29,9 +29,11 @@ class ProductController extends AppController
    // }
 
    public function prodtype(){
+
+     // $this->_session->destroy();
     $products = $this->Product->find()->all()->toArray();
-    $products_type = $this->ProductType->find('list')->toArray();
-    $this->set(compact('products','products_type'));
+    $this->set(compact('products'));
+
    }
 
    public function orderinfo(){
@@ -54,6 +56,7 @@ class ProductController extends AppController
 
    public function addProductIntoCart() {
     if($this->request->is('post')){
+<<<<<<< HEAD
       $product_id = isset($this->request->data['id']) ? $this->request->data['id'] : '';
       $type = !empty($product_id) ? $this->request->data['product_type_'.$product_id] : '';
 
@@ -77,11 +80,49 @@ class ProductController extends AppController
           $this->redirect('/order');
       }
     
+=======
+      $product_id = isset($this->request->data['product_id']) ? $this->request->data['product_id'] : '';
+      $type = isset($this->request->data['type_product']) ? $this->request->data['type_product'] : '';
+
+    if(!empty($product_id)){
+      $productInfo = $this->Product->findById($product_id)->toArray();
+    }
+        $cart = $this->_session->read('item');
+
+        // echo '<pre>';
+        // print_r($cart);
+        // echo '</pre>';
+        // die;
+      //    echo '<pre>';
+      // print_r($this->request->data);
+      // echo '</pre>';
+      // die;
+
+        if(empty($cart) && $productInfo){
+            $cart['quantity'][$product_id][$type]  = 1;
+        }else{
+          if(key_exists($product_id, $cart['quantity'])){
+              $cart['quantity'][$product_id][$type]  +=1;
+          }else{
+              $cart['quantity'][$product_id][$type]  = 1;
+          }
+        }
+      $this->_session->write('item', $cart); //lưu mảng cart vào sesion item nè
+      
+    }
+       $cart = $this->_session->read('item');
+
+      $this->redirect('/order');
+>>>>>>> a2f596730b084eebf3477c2d9ea36444ec77262d
    }
 
    public function order() {
     $item = $this->_session->read('item');
+
+
     $listProductInCart = $this->Product->getListProductInCart($item);
+
+
     
     if($this->request->is('post')){
       if(isset($this->request->data['cart_delete'])){

@@ -35,7 +35,7 @@
     </div>
 
     <div class="form-group">
-      <label for="note">Thông Tin Sản :</label>
+      <label for="note">Thông Tin Sản Phẩm:</label>
       <input type="note" class="form-control" id="note" placeholder="Enter note" name="note">
     </div>
 

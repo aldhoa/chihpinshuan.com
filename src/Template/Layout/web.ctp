@@ -14,7 +14,7 @@
   echo $this->Html->script(['/web/include/jscode/jquery','/web/include/jscode/js-image-slider','/web/include/jscode/highslide/highslide']);
 ?>
 </head>
-<body style="background-color: black">
+<body>
 <div class="Wrapper">
   <!-- Header -->
   <?= $this->element('common/header') ?>
@@ -23,8 +23,11 @@
   <?= $this->element('common/navbar') ?>
 
   <!-- Slider -->
-  <?= $this->element('common/slider') ?>
+  <?php 
+  if($this->request->getParam('action') != 'productDetail'): ?>
 
+  <?= $this->element('common/slider') ?>
+  <?php endif; ?>
   <div class="Middle">
   <?= $this->fetch('content') ?>
   <!-- Righter -->

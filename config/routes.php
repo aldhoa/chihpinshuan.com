@@ -58,14 +58,15 @@ Router::scope('/', function (RouteBuilder $routes) {
         $routes->connect('/product/add'         , ['controller' => 'Product', 'action' => 'add']);
         $routes->connect('/product/edit/:id'    , ['controller' => 'Product', 'action' => 'edit']);
         $routes->connect('/product/delete/:id'  , ['controller' => 'Product', 'action' => 'delete']);
-        $routes->connect('/orders'              , ['controller' => 'Orders'  , 'action' => 'orders']);
+        $routes->connect('/orders'              , ['controller' => 'Orders' , 'action' => 'orders']);
+        $routes->connect('/orders/detail/:id'   , ['controller' => 'Orders' , 'action' => 'ordersDetail']);
     });
 
     //config web
 
-        $routes->connect('/',           ['prefix' => 'web','controller' => 'Product', 'action' => 'index']);
+        $routes->connect('/about_us',           ['prefix' => 'web','controller' => 'Product', 'action' => 'index']);
         // $routes->connect('/media',      ['prefix' => 'web','controller' => 'Product', 'action' => 'media']);
-        $routes->connect('/product',   ['prefix' => 'web','controller' => 'Product', 'action' => 'prodtype']);
+        $routes->connect('/',   ['prefix' => 'web','controller' => 'Product', 'action' => 'prodtype']);
         $routes->connect('/orderinfo',  ['prefix' => 'web','controller' => 'Product', 'action' => 'orderinfo']);
         $routes->connect('/contact',    ['prefix' => 'web','controller' => 'Product', 'action' => 'contact']);
         $routes->connect('/product_detail/:id',    ['prefix' => 'web','controller' => 'Product', 'action' => 'product_detail']);

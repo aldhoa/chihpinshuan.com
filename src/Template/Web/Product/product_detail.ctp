@@ -15,11 +15,20 @@
                     <tbody><tr>
                       <td><table width="314" border="0" cellspacing="0" cellpadding="0">
                         <tbody><tr>
-                          <td height="210" align="center" valign="top"><!--style="background:url(images/pr00.jpg) no-repeat left top; padding-top:7px;"-->
-                          <div id="big_img"><a href="upload/2010/01/20100123034559.jpg" onclick="return hs.expand(this)">
+                          <td height="210" align="center" valign="top">
+                          <!--style="background:url(images/pr00.jpg) no-repeat left top; padding-top:7px;"-->
+                          <div id="big_img">
 
-                          <?php echo $this->Html->image('uploads/'.$product['image_1'],['width' => '300','height' => '255','alt' => $product['name']]) ?>
-                          </a></div></td>
+                         <?php 
+                            echo $this->Html->link(
+                              $this->Html->image('uploads/'.$product['image_1'],['width' => '600','height' => '510','alt' => $product['name']]),
+                              '/webroot/img/uploads/'.$product['image_1'],
+                              ['escape' => false,'class' => 'show_full_img']
+                          );
+                         ?>
+
+
+                          </div></td>
                         </tr>
                       </tbody></table></td>
                     </tr>
@@ -28,45 +37,67 @@
                         <tbody><tr>
                           <td align="center" width="33.3%">
 
-                          <a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2016/02/201602141552560.jpg" class=" ">
-                     
+                          <?php 
+                            echo $this->Html->link(
+                              $this->Html->image('uploads/'.$product['image_2'],['width' => '134','height' => '182','alt' => $product['name']]),
+                              '/webroot/img/uploads/'.$product['image_2'],
+                              ['escape' => false,'class' => 'show_full_img']
+                          );
+                         ?>
 
-                        <?php echo $this->Html->image('uploads/'.$product['image_2'],['width' => '68','height' => '91','border' => 0]) ?>
-
-                          </a>
                           </td>
-                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2016/02/20160214155256.jpg" class=" ">
-                        
+                          <td align="center" width="33.3%">
 
-                          <?php echo $this->Html->image('uploads/'.$product['image_3'],['width' => '68','height' => '91','border' => 0]) ?>
+                          <?php 
+                            echo $this->Html->link(
+                              $this->Html->image('uploads/'.$product['image_3'],['width' => '134','height' => '182','alt' => $product['name']]),
+                              '/webroot/img/uploads/'.$product['image_3'],
+                              ['escape' => false,'class' => 'show_full_img']
+                          );
+                         ?>
+                          </td>
+                          <td align="center" width="33.3%">
 
-                          </a></td>
-                          <td align="center" width="33.3%"><a onclick="return hs.expand(this)" href="http://www.juelin.tw/upload/2014/07/20140702171237.jpg" class=" ">
-                        
+                          <?php 
+                            echo $this->Html->link(
+                              $this->Html->image('uploads/'.$product['image_4'],['width' => '134','height' => '182','alt' => $product['name']]),
+                              '/webroot/img/uploads/'.$product['image_4'],
+                              ['escape' => false,'class' => 'show_full_img']
+                          );
+                         ?>
 
-                          <?php echo $this->Html->image('uploads/'.$product['image_4'],['width' => '68','height' => '91','border' => 0]) ?>
-
-                          </a></td>
+                          </td>
                         </tr>
                       </tbody></table>
+                      <?php echo $this->Form->create(null, [
+                        'url'   => '/add_product',
+                        'type'  => 'post',
+                        'id'    => 'addProduct' 
+                    ]); ?>
                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tbody><tr>
-                          <td align="left"><input type="radio" name="price" value="250-罐裝:重量420g淨重370g" checked="">罐裝:重量420g淨重370g&nbsp;&nbsp;價格250</td>
-                         </tr>
+                        <tbody>
+
                         <tr>
-                          <td align="left"><input type="radio" name="price" value="200-袋裝:重量250g">袋裝:重量250g&nbsp;&nbsp;價格200</td>
+                          <td align="left"><input type="radio" name="type_product" value="1" checked="">Đóng hộp</td>
                          </tr>
+                       
                         <tr>
-                          <td align="left"><input type="radio" name="price" value="750-三入禮盒組">三入禮盒組&nbsp;&nbsp;價格750</td>
+                          <td align="left"><input type="radio" name="type_product" value="2">Đóng gói</td>
                          </tr>
+
                       </tbody></table>
                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody><tr>
                           <td width="100%" colspan="3" style="padding-top:5px">
-                            <a href="<?php echo $this->Url->build(["controller" => "product", "action" => "addProductIntoCart", "id"=>$product['id']]); ?>" class="go-cart" title="馬上訂購"></a>
+                            <a class="go-cart" title="馬上訂購"></a>
+                            <input type="hidden" name="product_id" value="<?php echo $product['id'] ?>">
+                           
                           </td>
                         </tr>
-                      </tbody></table></td>
+                      </tbody></table>
+                    </form>
+
+                      </td>
                     </tr>
                   </tbody></table></td>
                   <td width="55%" valign="top" style="padding-left:15px; line-height:25px">
@@ -77,3 +108,15 @@
               </tbody></table>
           </div>
         </div>
+        <script>
+          $(function() {
+            $('.show_full_img').click(function(){
+              return hs.expand(this);
+            });
+
+            $('.go-cart').click(function() {
+              $('#addProduct').submit();
+            })
+            
+          });
+        </script>

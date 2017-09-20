@@ -1,7 +1,9 @@
 <?php
 namespace App\Controller\Admin;
 use Cake\ORM\TableRegistry;
+use Cake\Network\Exception\InternalErrorException;
 use Cake\Event\Event;
+use Cake\Utility\Text;
 
 class OrdersController extends AdminController {
     
@@ -11,23 +13,23 @@ class OrdersController extends AdminController {
   }
 
   public function orders() {
-    $data = $this->Orders->find()->where(['status' => 1])->all()->toArray();
-    $this->set('data', $data);
+    // $data = $this->Orders->find()->where(['status' => 1])->all()->toArray();
+    // $this->set('data', $data);
   }
 
   public function add () {
-    if ($this->request->is('post')) {
-      $productTable = TableRegistry::get('Product');
-      $product = $productTable->newEntity();
-      $data = $this->request->data;
-      $product->name = $data['name'];
-      $product->note = $data['note'];
-      $product->price = $data['price'];
-      if ($productTable->save($product)) {
-        $id = $product->id;
-        $this->redirect(['action' => 'product']);
-      }
-    }
+    // if ($this->request->is('post')) {
+    //   $productTable = TableRegistry::get('Product');
+    //   $product = $productTable->newEntity();
+    //   $data = $this->request->data;
+    //   $product->name = $data['name'];
+    //   $product->note = $data['note'];
+    //   $product->price = $data['price'];
+    //   if ($productTable->save($product)) {
+    //     $id = $product->id;
+    //     $this->redirect(['action' => 'product']);
+    //   }
+    // }
   }
 
   public function orderDetail () {

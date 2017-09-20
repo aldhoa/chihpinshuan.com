@@ -6,26 +6,29 @@
   }
 </style>
 <div class="Lefter">
-       	  <!-- <div class="ContentTitle"></div> -->
+          <!-- <div class="ContentTitle"></div> -->
             <div class="Pr">
 
             <?php 
-              if(!empty($products) && !empty($products_type)) {
-                $xhtml = '';
-                
+              if(!empty($products)) {
+                $xhtml =  $type_table ='';
+               
                 foreach ($products as $key => $product) {
-                  $type_table  = '';
-                  foreach ($products_type as $id => $type) {
-                    $checked = $id == 1 ? 'checked' : '';
-                    $type_table .= '<tr>
+                  $type_table = '<tr>
                               <td align="left">
-                              <input type="radio" name="product_type_'.$product['id'].'" value="'.$id.'" '.$checked.'>'.$type.'</td>
+                              <input type="radio" name="type_product" value="1" checked>Đóng hộp</td>
+                              </tr>
+                              <tr>
+                              <td align="left">
+                              <input type="radio" name="type_product" value="2">Đóng gói</td>
                               </tr>';
-                  }
-                 
-                $xhtml .= '<form method="post" action="add_product" id="form_product_'.$product['id'].'"> 
-                <input type="hidden" name="id" value="'.$product['id'].'">
-                <table class="product_table" width="221" border="0" cellspacing="0" cellpadding="0">                    
+                  
+
+                $xhtml .= $this->Form->create(null, [
+                        'url'   => '/add_product',
+                        'type'  => 'post',
+                        'id'    => 'addProduct' 
+                    ]).'<table class="product_table" width="235" border="0" cellspacing="0" cellpadding="0">                    
                     <tr>
                       <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
@@ -35,12 +38,13 @@
                           <td valign="top" style="padding-top:8px"><table width="38%" border="0" cellspacing="1" cellpadding="1">
                             <tr>
                               <td>
+                              <input type="hidden" name="product_id" value="'.$product['id'].'">
                               <a href="'.$this->Url->build(["controller" => "product", "action" => "product_detail", "id"=>$product['id']]).'">
                               '.$this->Html->image('uploads/'.$product['image_1'],['width' => '208','height' => '155','border' => 0]).'
                               </a>
                               </td>
                             </tr>
-                          </table></td>
+                          </table></form></td>
                         </tr>
                         
                         <tr>
@@ -56,13 +60,10 @@
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                               <td width="44%" style="padding-top:5px">&nbsp;</td>
-                              <td width="36%" align="right">
-                                <a href="javascript:void(0);" class="Order order_product" id="'.$product['id'].'">馬上訂購</a>&nbsp;
-                              </td>
-                              
-                              <td width="20%" valign="top">
-                                <a href="javascript:void(0);" id="'.$product['id'].'" class="Order order_product">'.$this->Html->image('/webroot/web/images/go.jpg',['width' => '26','height' => '27','border' => 0]).'</a>
-                              </td>
+
+                              <td width="36%" align="right"><a class="Order add_product_to_cart">馬上訂購</a>&nbsp;</td>
+                              <td width="20%" valign="top"><a class="add_product_to_cart">'.$this->Html->image('/webroot/web/images/go.jpg',['width' => '26','height' => '27','border' => 0]).'</a></td>
+
                             </tr>
                           </table></td>
                         </tr>
@@ -75,19 +76,21 @@
               }
             ?>
             <div style="clear:both;"></div>    
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Pages" align="center">
+              <!-- <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Pages" align="center">
                 <tr>
                   <td align="center"><a href="javascript:;" class="BtnFirst">首頁</a><a href="javascript:;" class="BtnPrev">上一頁</a><em class="BtnNumSelect">1</em><a href="?action=prodtype&p=2" class="BtnNum">2</a><a href="?action=prodtype&p=2" class="BtnNext">下一頁</a><a href="?action=prodtype&p=2" class="BtnEnd">尾頁</a></td>
                 </tr>
-              </table>
+              </table> -->
             </div>
         </div>
 
         <script>
           $(function() {
-            $('.order_product').click(function(){
-              var id = $(this).attr('id');
-              $('#form_product_'+id).submit();
-            });
+           
+
+            $('.add_product_to_cart').click(function() {
+              $('#addProduct').submit();
+            })
+            
           });
         </script>
