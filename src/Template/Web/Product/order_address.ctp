@@ -2,11 +2,6 @@
      	  <!-- <div class="ContentTitle"></div> -->
       <div class="About">
       		<form action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this)">
-            <input type="hidden" name="send" value="email">
-			 <input type="hidden" name="payrank" value="0">
-			  <input type="hidden" name="shebei" value="P">
-
-
             <table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#cea06f">
                 <tbody><tr>
                   <td width="20%" align="center" bgcolor="#FEF4D0">圖片</td>
@@ -63,25 +58,25 @@
                   <td align="left" colspan="2"><span class="notice"><strong>請留下您的聯絡方式</strong></span></td>
                 </tr>
                 <tr>
-                  <td width="160px" align="right"><span class="redword">* </span><strong>付款方式</strong>：</td>
-                  <td align="left">
-                    <label for="pay1"><input name="pay" type="radio" id="pay1" value="貨到付款" checked="">貨到付款</label>
+                  <!-- <td width="160px" align="right"><span class="redword">* </span><strong>付款方式</strong>：</td> -->
+                  <!-- <td align="left"> -->
+                    <!-- <label for="pay1"><input name="pay" type="radio" id="pay1" value="貨到付款" checked="">貨到付款</label> -->
                      <!-- <label for="paycount1"><input name="pay" type="radio" id="paycount1" value="信用卡">信用卡</label>
                     <label for="paycount2"><input name="pay" type="radio" id="paycount2" value="銀聯卡">銀聯卡</label> -->
-                  </td>
+                  <!-- </td> -->
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td align="right"><span class="redword">* </span><strong>公司名稱</strong>：</td>
-                  <td align="left"><input name="corp" type="text" id="corp" size="40"></td>
-                </tr>
+                  <td align="left"><input name="company_name" type="text" id="corp" size="40"></td>
+                </tr> -->
                 <tr>
                   <td align="right"><span class="redword">* </span><strong>姓名</strong>：</td>
                   <td align="left"><input name="name" type="text" id="name" size="40"></td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td align="right"><span class="redword">* </span><strong>電話</strong>：</td>
                   <td align="left"><input name="tel" type="text" id="tel" size="40"></td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td align="right"><span class="redword">* </span><strong>手機</strong>：</td>
                   <td align="left"><input name="phone" type="text" id="phone" size="40"></td>
@@ -94,13 +89,13 @@
                   <td align="right"><span class="redword">* </span><strong>地址</strong>：</td>
                   <td align="left"><input name="address" type="text" id="address" size="40"></td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td align="right"><strong>統編</strong>：</td>
                   <td align="left"><input name="zipCode" type="text" id="zipCode" size="40"></td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td align="right"><strong>備註</strong>：</td>
-                  <td align="left"><textarea name="remark" title="備註" cols="50" rows="6"></textarea></td>
+                  <td align="left"><textarea name="note" title="備註" cols="50" rows="6"></textarea></td>
                 </tr>
               <tr>
                   <td align="center" colspan="2">

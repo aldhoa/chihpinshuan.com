@@ -1,7 +1,9 @@
 <?php
 namespace App\Controller\Web;
 use App\Controller\AppController;
+use Cake\Datasource\ConnectionManager;
 use Cake\Mailer\Email;
+use Cake\ORM\TableRegistry;
 
 
 class ProductController extends AppController
@@ -15,8 +17,8 @@ class ProductController extends AppController
         $this->loadModel('Orders');
         $this->loadModel('User');
         $this->viewBuilder()->setLayout('web');
-        // $products = $this->Product->find()->all()->toArray();
-        // $this->set(compact('products'));
+        $products = $this->Product->find()->all()->toArray();
+        $this->set(compact('products'));
         $this->_session = $this->request->session();
     }
 
@@ -126,6 +128,67 @@ class ProductController extends AppController
     $listProductInCart = $this->Product->getListProductInCart($item);
     $this->set('productInCart',$item);
     $this->set('listProductInCart',$listProductInCart);
+    if ($this->request->is('post')) {
+
+      $conn = ConnectionManager::get('default');
+
+      $conn->transactional(function () use ($item,$listProductInCart) {
+      $orderDetailTable = TableRegistry::get('OrderDetail');
+      $orderTable = TableRegistry::get('Orders');
+      $order = $orderTable->newEntity();
+      
+      $data = $this->request->data;
+      $order->customer_name = $data['name'];
+      $order->address = $data['address'];
+      $order->phone = $data['phone'];
+      $order->email = $data['email'];
+      $order->note = $data['note'];
+      // $order->total_price = $totalMoney;
+      $order->created_at = date('Y-m-d H:i:s');
+      $order->modified_at = date('Y-m-d H:i:s');
+
+      if ($data = $orderTable->save($order)) {
+
+        $order_id = $data['id'];
+        
+      }
+
+
+      if(!empty($listProductInCart) && !empty($item['quantity'])) {
+          $totalMoney = $quantity = '';
+         foreach ($listProductInCart as $product) {
+          $orderDetail = $orderDetailTable->newEntity();
+          foreach ($item['quantity'][$product['id']] as $key => $value) {
+            $totalMoney += $product['price'] * $item['quantity'][$product['id']][$key];
+            $quantity += $item['quantity'][$product['id']][$key];
+            $orderDetail->id_order        = $order_id;
+            $orderDetail->id_product      = $product['id'];
+            $orderDetail->quantity        = $item['quantity'][$product['id']][$key];
+            $orderDetail->price           = $product['price'];
+            $orderDetail->created_at      = date('Y-m-d H:i:s');
+            $orderDetail->modified_at     = date('Y-m-d H:i:s');
+            $orderDetail->product_type_id = 1;
+            $orderDetail->status = 1;
+
+            $orderDetailTable->save($orderDetail);
+            }
+          }
+
+          $order->id = $order_id;
+          $order->quantity = $quantity;
+          $order->total_price = $totalMoney;
+
+          if ($data = $orderTable->save($order)) {
+
+            $this->_session->destroy();
+            $this->redirect('/');
+          }
+
+        }
+                
+      
+        });
+      }
    }
 
    public function orderSuccess(){
