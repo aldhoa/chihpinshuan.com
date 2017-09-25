@@ -1,7 +1,7 @@
 <div class="Lefter">
      	  <!-- <div class="ContentTitle"></div> -->
       <div class="About">
-      		<form action="" method="post" enctype="multipart/form-data" onsubmit="return checkForm(this)">
+      		<form action="" method="post" enctype="multipart/form-data" id="form_order_product">
             <table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#cea06f">
                 <tbody><tr>
                   <td width="20%" align="center" bgcolor="#FEF4D0">圖片</td>
@@ -95,12 +95,12 @@
                 </tr> -->
                 <tr>
                   <td align="right"><strong>備註</strong>：</td>
-                  <td align="left"><textarea name="note" title="備註" cols="50" rows="6"></textarea></td>
+                  <td align="left"><textarea name="note" id="note" title="備註" cols="50" rows="6"></textarea></td>
                 </tr>
               <tr>
                   <td align="center" colspan="2">
                     <input type="button" value="上一頁" class="botton" onclick="location.href='index.php?action=order'">
-                    <input type="submit" value="送出" class="botton">
+                    <input type="submit" value="送出" class="botton" id="order_product">
                   </td>
                 </tr> 
             </tbody></table>
@@ -128,3 +128,24 @@
 			
       </div>
 </div>
+
+<script>
+  $(function(){
+    $('#order_product').click(function(e){
+      e.preventDefault();
+      if(!$('#name').val().trim()){
+        alert('Please enter name');
+      }else if(!$('#phone').val().trim()){
+        alert('Please enter phone');
+      }
+      else if(!$('#address').val().trim()){
+        alert('Please enter address');
+      }
+   
+    else{
+        $('#form_order_product').submit();
+      }
+    });
+    
+  });
+</script>
