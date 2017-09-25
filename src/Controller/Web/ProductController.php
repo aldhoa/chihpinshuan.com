@@ -15,8 +15,8 @@ class ProductController extends AppController
         $this->loadModel('Orders');
         $this->loadModel('User');
         $this->viewBuilder()->setLayout('web');
-        $products = $this->Product->find()->all()->toArray();
-        $this->set(compact('products'));
+        // $products = $this->Product->find()->all()->toArray();
+        // $this->set(compact('products'));
         $this->_session = $this->request->session();
     }
 
