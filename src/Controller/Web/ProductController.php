@@ -38,7 +38,8 @@ class ProductController extends AppController
    }
 
    public function orderinfo(){
-    
+    $products = $this->Product->find()->all()->toArray();
+    $this->set(compact('products'));
    }
 
    public function contact(){
