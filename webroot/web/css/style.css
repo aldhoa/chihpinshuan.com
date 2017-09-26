@@ -6,15 +6,15 @@ body {
 	}
 .Wrapper {
 	margin:0 auto;
-	width:100%;
+	width:1003px;
 	background: white;
 	}
 .Banner {
-	width:100%;
+	width:1003px;
 	height:476px;
 	}
 .Middle {
-	width:100%;
+	width:1003px;
 	font-size:12px;
 	font-family:Arial, Helvetica, sans-serif;
 	}
@@ -33,7 +33,7 @@ body {
 	height:102px;
 	}
 .Footer {
-	width:100%;
+	width:1003px;
 	color:#570208;
 	font-size:12px;
 	text-align:center;
@@ -174,7 +174,7 @@ body {
 .go-cart:hover { opacity: .8; }
 
 .Wrapper { position: relative; }
-.header-top { position: absolute; top:0;    width: 100%; }
+.header-top { position: absolute; top:0;    width: 1003px; }
 .top-cart,.top-home {
     position: absolute;
     right: 190px;

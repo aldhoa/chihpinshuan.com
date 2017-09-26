@@ -95,7 +95,8 @@
                 </tr> -->
                 <tr>
                   <td align="right"><strong>備註</strong>：</td>
-                  <td align="left"><textarea name="note" id="note" title="備註" cols="35" rows="6"></textarea></td>
+
+                  <td align="left"><textarea name="note" id="note" title="備註" cols="50" rows="6"></textarea></td>
                 </tr>
               <tr>
                   <td align="center" colspan="2">
