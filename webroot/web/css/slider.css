@@ -1,5 +1,9 @@
 /*#sliderFrame {position:relative;width:700px;margin: 0 auto 40px;}*/
-        
+@media screen and (max-width: 480px) {
+   #slider { 
+        width: 100% !important;height: 250px !important;
+   }
+  }        
 #slider {
     width:1003px;height:476px;
     
@@ -40,3 +44,4 @@
 #sliderFrame img:hover {
     opacity: 0.8;
 }
+

@@ -2,9 +2,9 @@
      	  <!-- <div class="ContentTitle"></div> -->
       <div class="About">
       		<form action="" method="post" name="msgform" id="form_contact">
-			 <table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
+			 <table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
                <tr>
-               	<td colspan="2" style="padding:0px 0px 10px 0px;"><iframe width="580" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5804.94289728793!2d106.66016229727289!3d10.786229490604532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed20e44d543%3A0x1b141b7fa6d03f4c!2zQ8O0bmcgdmnDqm4gTMOqIFRo4buLIFJpw6puZw!5e0!3m2!1svi!2sin!4v1503397551040"></iframe><br /><small>
+               	<td colspan="2" style="padding:0px 0px 10px 0px;"><iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5804.94289728793!2d106.66016229727289!3d10.786229490604532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed20e44d543%3A0x1b141b7fa6d03f4c!2zQ8O0bmcgdmnDqm4gTMOqIFRo4buLIFJpw6puZw!5e0!3m2!1svi!2sin!4v1503397551040"></iframe><br /><small>
 
                	<a href="https://www.google.co.in/maps/place/C%C3%B4ng+vi%C3%AAn+L%C3%AA+Th%E1%BB%8B+Ri%C3%AAng/@10.7862295,106.6601623,16.43z/data=!4m5!3m4!1s0x31752ed20e44d543:0x1b141b7fa6d03f4c!8m2!3d10.7865388!4d106.6650998" style="color:#0000FF;text-align:left">檢視較大的地圖</a>
 
@@ -39,7 +39,7 @@
 			   </tr>
 			   <tr>
 			     <td valign="top" class="font_12"><div align="right">內　　容﹕</div></td>
-			     <td class="font_12"><textarea name="content" id="content" cols="60" rows="9"></textarea></td>
+			     <td class="font_12"><textarea name="content" id="content" rows="9"></textarea></td>
 			   </tr>
 			   <tr>
 			     <td class="font_12">&nbsp;</td>
@@ -78,5 +78,5 @@
 			}
 		});
 		
-	})
+	});
 </script>

@@ -1,13 +1,22 @@
 <style>
   .product_table {
+    /*float: left;*/
+   /* margin-bottom: 18px;
+    margin-right: 10px;*/
+  }
+  #addProduct {
+    width: 25%;
     float: left;
-    margin-bottom: 18px;
-    margin-right: 10px;
+  }
+  @media only screen and (max-width: 480px) {
+    #addProduct { 
+      width: 100%;
+    }
   }
 </style>
 <div class="Lefter">
           <!-- <div class="ContentTitle"></div> -->
-            <div class="Pr">
+            <div class="Pr" style="padding: 0 10%;">
 
             <?php 
               if(!empty($products)) {
@@ -28,33 +37,29 @@
                         'url'   => '/add_product',
                         'type'  => 'post',
                         'id'    => 'addProduct' 
-                    ]).'<table class="product_table" width="235" border="0" cellspacing="0" cellpadding="0">                    
+                    ]).'<table class="product_table" border="0" cellspacing="0" cellpadding="0">                    
                     <tr>
                       <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                         <td valign="top" class="Titlebg"><font style="font-size:14px">'.$product['name'].'</font></td>
                       </tr>
                        <tr>
-                          <td valign="top" style="padding-top:8px"><table width="38%" border="0" cellspacing="1" cellpadding="1">
+                          <td valign="top" style="padding-top:8px"><table border="0" cellspacing="1" cellpadding="1">
                             <tr>
                               <td>
                               <input type="hidden" name="product_id" value="'.$product['id'].'">
                               <a href="'.$this->Url->build(["controller" => "product", "action" => "product_detail", "id"=>$product['id']]).'">
-                              '.$this->Html->image('uploads/'.$product['image_1'],['width' => '208','height' => '155','border' => 0]).'
+                              '.$this->Html->image('uploads/'.$product['image_1'],['width' => '100%','height' => 155,'border' => 0]).'
                               </a>
                               </td>
                             </tr>
-                          </table></form></td>
+                          </table></td>
                         </tr>
                         
                         <tr>
                           <td><table width="100%" border="0" cellspacing="0" cellpadding="0" height="60">
-
-                            
                             <td align="left">&nbsp;</td>
                             </tr>
-
-
                         </table>
 
                           <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -72,7 +77,6 @@
                   </table></form>';
                 }
                 echo $xhtml;
-               
               }
             ?>
             <div style="clear:both;"></div>    
@@ -86,8 +90,6 @@
 
         <script>
           $(function() {
-           
-
             $('.add_product_to_cart').click(function() {
               $('#addProduct').submit();
             })

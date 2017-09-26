@@ -3,22 +3,14 @@ body {
   margin: 0px;
 }
 nav {
- /* padding-top: 60px;
-  padding-bottom: 5px;
-  padding-right: 45px;*/
   text-align: center;
   font-family: Raleway;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-#nav-3 {
-  /*padding-right: 110px;*/
-  /*background: url('../../webroot/web/images/bg_menu.jpg');*/
-}
 
 
 .link-3 {
-  /*background: url(../../webroot/web/images/icon_menu.png) 7px 0 no-repeat;*/
   display: inline-block;
   width: 111px;
   height: 96px;
@@ -30,12 +22,32 @@ nav {
   text-decoration: none;
   font-weight: bold;
   z-index: 100;
-  /*padding: 40px 30px;
-  margin: 0 10px;*/
 }
 .link-3:hover {
   color: red;
   background: url(../../webroot/web/images/icon_menu.png) 0 0 no-repeat;
   z-index: 10000;
-  /*padding: 40px 30px;*/
 }
+@media only screen and (max-width: 480px) {
+    .link-3 {
+      font-size: 13px;
+      padding: 7px 5px;
+      width: 20%;
+    }
+    .link-3:hover {
+      background: white;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+

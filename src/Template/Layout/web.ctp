@@ -31,7 +31,7 @@
   <div class="Middle">
   <?= $this->fetch('content') ?>
   <!-- Righter -->
-  <?= $this->element('common/righter') ?>
+ <!-- $this->element('common/righter') -->
   </div>
     <!-- Footer -->
     <?= $this->element('common/footer') ?>
