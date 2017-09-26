@@ -16,7 +16,7 @@
 </style>
 <div class="Lefter">
           <!-- <div class="ContentTitle"></div> -->
-            <div class="Pr" style="padding: 20px 10%;">
+            <div class="Pr" style="padding: 0 10%;">
 
             <?php 
               if(!empty($products)) {
