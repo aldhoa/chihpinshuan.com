@@ -16,7 +16,7 @@
 </style>
 <div class="Lefter">
           <!-- <div class="ContentTitle"></div> -->
-            <div class="Pr" style="padding: 0 7%;">
+            <div class="Pr" style="padding: 20px 10%;">
 
             <?php 
               if(!empty($products)) {
@@ -49,7 +49,7 @@
                               <td>
                               <input type="hidden" name="product_id" value="'.$product['id'].'">
                               <a href="'.$this->Url->build(["controller" => "product", "action" => "product_detail", "id"=>$product['id']]).'">
-                              '.$this->Html->image('uploads/'.$product['image_1'],['width' => '100%','border' => 0]).'
+                              '.$this->Html->image('uploads/'.$product['image_1'],['width' => '100%','height' => 155,'border' => 0]).'
                               </a>
                               </td>
                             </tr>
