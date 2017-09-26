@@ -58,8 +58,10 @@
                     <td><?php echo $value['email']; ?></td>
                     <td><?php echo $value['note']; ?></td>
                     <td class="o-giua">
-                      <div class="widget-content"><a href="<?php echo $this->Url->build(["controller" => "orders", "action" => "orderDetail", "id"=>$orders['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Chi Tiết Đơn Hàng"><ul><li><i class="icon-info-sign"></i></li></ul></button> </a>
-    
+                      <div class="widget-content">
+
+                      <!-- <a href="<?php //echo $this->Url->build(["controller" => "orders", "action" => "orderDetail", "id"=>$value['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Chi Tiết Đơn Hàng"><ul><li><i class="icon-info-sign"></i></li></ul></button> </a>
+     -->
                       <div id="1" class="modal hide">
                         <div class="modal-header">
                           <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>

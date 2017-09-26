@@ -13,8 +13,9 @@ class OrdersController extends AdminController {
   }
 
   public function orders() {
-    // $data = $this->Orders->find()->where(['status' => 1])->all()->toArray();
-    // $this->set('data', $data);
+    $data = $this->Orders->find()->where(['status' => 1])->all()->toArray();
+
+    $this->set('data', $data);
   }
 
   public function add () {
