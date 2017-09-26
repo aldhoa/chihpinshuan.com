@@ -17,4 +17,12 @@
 
 </div>
 </div>       
+
+<style>
+	@media only screen and (max-width: 480px) {
+    .space {
+    	margin-left: 0;
+    }
+  }
+</style>
 	    
