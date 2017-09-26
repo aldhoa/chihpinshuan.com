@@ -9,13 +9,13 @@
         <div class="SubMenu"><?php echo $product['name'] ?></div>
       </div>
             <div class="Pr000">
-              <table border="0" cellspacing="0" cellpadding="0" style="margin: 0 auto">
+              <table border="0" cellspacing="0" cellpadding="0">
                 <tbody><tr>
                   <td valign="top"><table border="0" cellspacing="0" cellpadding="0">
                     <tbody><tr>
                       <td><table border="0" cellspacing="0" cellpadding="0">
                         <tbody><tr>
-                          <td align="center" valign="top">
+                          <td height="210" align="center" valign="top">
                           <!--style="background:url(images/pr00.jpg) no-repeat left top; padding-top:7px;"-->
                           <div id="big_img">
 
@@ -33,13 +33,13 @@
                       </tbody></table></td>
                     </tr>
                     <tr>
-                      <td valign="top"><table  border="0" cellspacing="2" cellpadding="3">
+                      <td valign="top"><table border="0" cellspacing="2" cellpadding="3">
                         <tbody><tr>
                           <td align="center" width="33.3%">
 
                           <?php 
                             echo $this->Html->link(
-                              $this->Html->image('uploads/'.$product['image_2'],['width' => '134','height' => '182','alt' => $product['name']]),
+                              $this->Html->image('uploads/'.$product['image_2'],['width' => '100%','alt' => $product['name']]),
                               '/webroot/img/uploads/'.$product['image_2'],
                               ['escape' => false,'class' => 'show_full_img']
                           );
@@ -50,7 +50,7 @@
 
                           <?php 
                             echo $this->Html->link(
-                              $this->Html->image('uploads/'.$product['image_3'],['width' => '134','height' => '182','alt' => $product['name']]),
+                              $this->Html->image('uploads/'.$product['image_3'],['width' => '100%','alt' => $product['name']]),
                               '/webroot/img/uploads/'.$product['image_3'],
                               ['escape' => false,'class' => 'show_full_img']
                           );
@@ -60,7 +60,7 @@
 
                           <?php 
                             echo $this->Html->link(
-                              $this->Html->image('uploads/'.$product['image_4'],['width' => '134','height' => '182','alt' => $product['name']]),
+                              $this->Html->image('uploads/'.$product['image_4'],['width' => '100%','alt' => $product['name']]),
                               '/webroot/img/uploads/'.$product['image_4'],
                               ['escape' => false,'class' => 'show_full_img']
                           );
@@ -68,19 +68,18 @@
 
                           </td>
                         </tr>
-                        <tr>
-                          <td valign="top" style="padding-left:15px; line-height:25px">
+                        <tr><td valign="top" style="padding-left:15px; line-height:25px">
                   <strong><?php echo $product['note'] ?><br>
 <font color="#000000"><font face="新細明體"><strong>保存期間：二<span lang="EN-US">個月。</span></strong></font></font></strong>                  
-                  </td>
-                        </tr>
+                  </td></tr>
+
                       </tbody></table>
                       <?php echo $this->Form->create(null, [
                         'url'   => '/add_product',
                         'type'  => 'post',
                         'id'    => 'addProduct' 
                     ]); ?>
-                       <!-- <table border="0" cellspacing="0" cellpadding="0">
+                     <!--   <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody>
 
                         <tr>
@@ -94,18 +93,20 @@
                       </tbody></table> -->
                       <table border="0" cellspacing="0" cellpadding="0">
                         <tbody><tr>
-                          <td  colspan="3" style="padding-top:5px">
+                          <td colspan="3" style="padding-top:5px">
                             <a class="go-cart" title="馬上訂購"></a>
                             <input type="hidden" name="product_id" value="<?php echo $product['id'] ?>">
                            
                           </td>
                         </tr>
                       </tbody></table>
+
                     </form>
 
                       </td>
                     </tr>
                   </tbody></table></td>
+
                 </tr>
               </tbody></table>
           </div>
