@@ -14,10 +14,10 @@
     </li>
   </ul>
 </div>
-<div id="search">
+<!-- <div id="search">
   <input type="text" placeholder="Search here..."/>
   <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
-</div>
+</div> -->
 <!--close-top-Header-menu-->
 
 </div>
@@ -44,8 +44,10 @@
                   <th>Số Điện Thoại</th>
                   <th>Email</th>
                   <th>Nội Dung</th>
-                  <th>Chi Tiết Đơn Hàng&frasl; Đã Giao Hàng&frasl; Xóa Hoặc Khôi Phục</th>
-                  <th>Trạng Thái</th>
+                  <th>Chi Tiết Đơn Hàng
+                  <!-- &frasl; Đã Giao Hàng&frasl; Xóa Hoặc Khôi Phục -->
+                  </th>
+                  <!-- <th>Trạng Thái</th> -->
                 </tr>
               </thead>
               <tbody class="btn-icon-pg my-btn-icon-pg don-hang">
@@ -60,8 +62,9 @@
                     <td class="o-giua">
                       <div class="widget-content">
 
-                      <!-- <a href="<?php //echo $this->Url->build(["controller" => "orders", "action" => "orderDetail", "id"=>$value['id']]); ?>" data-toggle="modal"> <button class="btn tip-top" data-original-title="Chi Tiết Đơn Hàng"><ul><li><i class="icon-info-sign"></i></li></ul></button> </a>
-     -->
+                      <!-- <a href="//echo $this->Url->build(["controller" => "orders", "action" => "orderDetail", "id"=>$value['id']]);" data-toggle="modal"> 
+                      <button class="btn tip-top" data-original-title="Chi Tiết Đơn Hàng"><ul><li><i class="icon-info-sign"></i></li></ul></button> </a>
+                      -->
                       <div id="1" class="modal hide">
                         <div class="modal-header">
                           <button data-dismiss="modal" class="close tip-top" data-original-title="Đóng" type="button">×</button>
@@ -74,18 +77,18 @@
                             </div>
                           </div>
                           <div>
-                            <button class="btn tip-top" data-original-title="Đã Soạn Hàng"><ul><li><i class="icon-cog"></i></li></ul></button>
-                            <button class="btn tip-top" data-original-title="Chưa Soạn Hàng"><ul><li><i class="icon-repeat"></i></li></ul></button>
                           </div>
                         </div>
                         
                       </div>
-                      <button class="btn tip-top" data-original-title="Đã Giao Hàng"><ul><li><i class="icon-road"></i></li></ul></button>
-                      <button class="btn tip-top" data-original-title="Xóa Đơn Hàng"><ul><li><i class="icon-trash"></i></li></ul></button>
+                      <button id="order_detail" data-toggle="modal" data-target="#myModal" class="btn tip-top" data-original-title="Chi Tiết Đơn Hàng" order_id ="<?php echo $value['id']; ?>"><ul><li><i class="icon-th"></i></li></ul></button>
+                      
+                       <a class="btn tip-top confirm_delete" type="submit" data-original-title="delete" href="<?php echo $this->Url->build(["controller" => "orders", "action" => "delete", "id"=>$value['id']]); ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
                     </div>
 
                     </td>
-                    <td class="o-giua"><ul><li><i class="icon-ok tip-top" data-original-title="Hiện Có"></i></li></ul></td>
+                    <!--
+                    <td class="o-giua"><ul><li><i class="icon-ok tip-top" data-original-title="Hiện Có"></i></li></ul></td>-->
                   </tr>
                 <?php } ?>
               </tbody>
@@ -96,4 +99,56 @@
     </div>
   </div>
 </div>
+<!-- Trigger the modal with a button -->
+<!-- <button type="button" class="btn btn-info btn-lg ablfdjal" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Chi tiết đơn hàng</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-striped">
+          <thead>
+          <tr>
+            <td>Tên sản phẩm</td>
+            <td>Giá tiền</td>
+            <td>Số lượng</td>
+          </tr>
+          </thead>
+
+          <tbody class="body_content">
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 <div class="row-fluid">
+
+<script>
+  $(function(){
+    $(document).on('click','#order_detail',function(){
+      var id = $(this).attr('order_id');
+      $('.body_content').html('');
+      $.ajax({
+        method: "get",
+        url: "<?php echo $this->request->webroot; ?>admin/showOrderDetail?id="+id,
+        dataType: "html",
+        success: function(data){
+          $('.body_content').html(data);
+        }
+      });
+    })
+  })
+
+</script>

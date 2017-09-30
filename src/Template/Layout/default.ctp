@@ -28,7 +28,17 @@
   echo $this->Html->css('/admin/css/uniform');
   
   echo $this->Html->script('/admin/js/jquery.min');
+  echo $this->Html->script('/admin/js/bootstrap.min');
 ?>
+<script>
+  $(function(){
+    $(document).on('click','.confirm_delete',function(e){
+      if(!confirm("Do you want delete it?")){
+        e.preventDefault();
+      }
+    });
+  })
+</script>
 </head>
 <body>
     <!--Header-part-->

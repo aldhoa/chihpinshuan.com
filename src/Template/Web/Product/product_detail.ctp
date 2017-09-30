@@ -74,7 +74,7 @@
                         'type'  => 'post',
                         'id'    => 'addProduct' 
                     ]); ?>
-                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <!--  <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody>
 
                         <tr>
@@ -85,7 +85,7 @@
                           <td align="left"><input type="radio" name="type_product" value="2">Đóng gói</td>
                          </tr>
 
-                      </tbody></table>
+                      </tbody></table> -->
                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tbody><tr>
                           <td width="100%" colspan="3" style="padding-top:5px">

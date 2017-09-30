@@ -19,10 +19,10 @@
     </li>
   </ul>
 </div>
-<div id="search">
+<!-- <div id="search">
   <input type="text" placeholder="Search here..."/>
   <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
-</div>
+</div> -->
 <!--close-top-Header-menu-->
 
 <!--close-top-Header-menu-->
@@ -54,8 +54,8 @@
                   <th>Hình Ảnh 4</th>
                   <th>Thông Tin Sản Phẩm</th>
                   <th>Giá</th>
-                  <th>Sửa&frasl; Xóa Hoặc Khôi Phục</th>
-                  <th>Trạng thái</th>
+                  <th>Sửa&frasl; Xóa</th>
+                  <!-- <th>Trạng thái</th> -->
                 </tr>
               </thead>
                 <tbody class="btn-icon-pg my-btn-icon-pg dong-ho">
@@ -88,11 +88,11 @@
                           </div>
                         </div>
 
-                        <a class="btn tip-top" type="submit" data-original-title="delete" href="<?php echo $this->Url->build(["controller" => "product", "action" => "delete", "id"=>$product['id']]); ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
+                        <a class="btn tip-top confirm_delete" type="submit" data-original-title="delete" href="<?php echo $this->Url->build(["controller" => "product", "action" => "delete", "id"=>$product['id']]); ?>"> <ul><li><i class="icon-trash"></i></li></ul></a>
 
                       </div>
                     </td>
-                    <td class="o-giua"><ul><li><i class="icon-ok tip-top" data-original-title="Hiện Có"></i></li></ul></td>
+                  
                   </tr>
               <?php } ?>
                 </tbody>
@@ -104,3 +104,5 @@
     </div>
   </div>
 <div class="row-fluid">
+
+

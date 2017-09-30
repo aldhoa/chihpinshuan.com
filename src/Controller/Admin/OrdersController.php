@@ -56,11 +56,31 @@ class OrdersController extends AdminController {
 
   public function delete () {
     $id = $this->request->params['id'];
-    $productTable = TableRegistry::get('Product');
-    $product = $productTable->get($id);
-    $product->status = 0;
-    $product->id = $id;
-    $productTable->save($product);
-    $this->redirect(['action' => 'product']);
+    $orderTable = TableRegistry::get('Orders');
+    $order = $orderTable->get($id);
+    $order->status = 0;
+    $order->id = $id;
+    $orderTable->save($order);
+    $this->redirect(['action' => 'orders']);
+  }
+
+  public function showOrderDetail(){
+    $this->viewBuilder()->setLayout(false);
+    $data = [];
+    if($this->request->is('get')){
+      $id = !empty($this->request->query['id']) ? trim($this->request->query['id']) : '';
+      if(!empty($id)){
+        $OrderDetail = TableRegistry::get('OrderDetail');
+        $join = [
+          'pr' => [
+            'table' => 'product',
+            'type' => 'inner',
+            'conditions' => 'pr.id=OrderDetail.id_product'
+          ]
+        ];
+        $data = $OrderDetail->find()->select(['pr.name','OrderDetail.price','OrderDetail.quantity'])->where(['id_order' => $id])->join($join)->toArray();
+      }
+    }
+    $this->set(compact('data'));
   }
 }
