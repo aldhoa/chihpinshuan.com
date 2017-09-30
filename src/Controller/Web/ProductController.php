@@ -138,21 +138,23 @@ class ProductController extends AppController
       $order = $orderTable->newEntity();
       
       $data = $this->request->data;
+
+
       $order->customer_name = $data['name'];
       $order->address = $data['address'];
       $order->phone = $data['phone'];
       $order->email = $data['email'];
       $order->note = $data['note'];
-      // $order->total_price = $totalMoney;
+      $order->status = 1;
       $order->created_at = date('Y-m-d H:i:s');
       $order->modified_at = date('Y-m-d H:i:s');
+      $order->deleted_at = date('Y-m-d H:i:s');
 
+     
       if ($data = $orderTable->save($order)) {
-
         $order_id = $data['id'];
         
       }
-
 
       if(!empty($listProductInCart) && !empty($item['quantity'])) {
           $totalMoney = $quantity = '';
